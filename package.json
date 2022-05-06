@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-blog-demo",
+  "name": "adolfolh",
   "version": "1.0.0",
   "private": true,
-  "description": "Gatsby Blog Demo",
-  "author": "Stefano Verna",
+  "description": "A wesbite by Adolfo López Herrera featuring his portfolio and articles",
+  "author": "Adolfo López Herrera",
   "keywords": [
     "gatsby"
   ],
