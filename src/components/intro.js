@@ -7,9 +7,8 @@ export default function Intro() {
         Blog.
       </h1>
       <h4 className="text-center md:text-right text-lg mt-5 md:pl-8">
-        A blog for all things Data, AI and Web. 
-        <br></br>
-        And any other thing that I find amusing :)
+        A blog for all things Data, AI, Web and
+        any other thing that I find interesting or worth sharing :)
       </h4>
     </section>
   )

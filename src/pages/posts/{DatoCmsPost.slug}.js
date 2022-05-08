@@ -6,25 +6,35 @@ import MoreStories from "../../components/more-stories";
 import PostBody from "../../components/post-body";
 import PostHeader from "../../components/post-header";
 import SectionSeparator from "../../components/section-separator";
+import Footer from "../../components/footer";
+import Sidebar from "../../components/post-header";
+
 import { HelmetDatoCms } from "gatsby-source-datocms";
 
 export default function Post({ data: { site, post, morePosts } }) {
   return (
-    <Container>
-      <HelmetDatoCms seo={post.seo} favicon={site.favicon} />
-      <Header />
-      <article>
-        <PostHeader
-          title={post.title}
-          coverImage={post.coverImage}
-          date={post.date}
-          author={post.author}
-        />
-        <PostBody content={post.content} />
-      </article>
-      <SectionSeparator />
-      {morePosts.nodes.length > 0 && <MoreStories posts={morePosts.nodes} />}
-    </Container>
+    <div className="flex m-0">
+      <div className="bg-beige overflow-hidden md:w-64 md:fixed md:h-full md:overflow-auto"></div> {/* Should be replaced with the <Sidebar> component */}
+      <Container>
+        <div className="ml-0 md:ml-64">
+          <HelmetDatoCms seo={post.seo} favicon={site.favicon} />
+          <Header />
+          <article>
+            <PostHeader
+              title={post.title}
+              coverImage={post.coverImage}
+              date={post.date}
+              author={post.author}
+            />
+            <PostBody content={post.content} />
+          </article>
+          <SectionSeparator />
+          {morePosts.nodes.length > 0 && <MoreStories posts={morePosts.nodes} />}
+
+          <Footer></Footer>
+        </div>
+      </Container>
+    </div>
   );
 }
 
@@ -69,7 +79,7 @@ export const query = graphql`
     }
     morePosts: allDatoCmsPost(
       sort: { fields: date, order: DESC }
-      limit: 2
+      limit: 3
       filter: { id: { ne: $id } }
     ) {
       nodes {

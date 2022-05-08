@@ -8,7 +8,7 @@ export default function CoverImage({ title, fluid, slug }) {
     <GatsbyImage 
       image={fluid}
       alt={`Cover Image for ${title}`}
-      className={'block'}
+      className={'hidden md:block m-auto max-w-full'}
     />
   );
   return (

@@ -16,7 +16,7 @@ export default function Index({ data: { allPosts, site, blog } }) {
   const morePosts = allPosts.nodes.slice(1);
 
   return (
-    <div className="">
+    <div className="flex">
       <Sidebar></Sidebar>
       <Container>
         <div className="ml-0 md:ml-64">

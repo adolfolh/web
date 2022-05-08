@@ -14,13 +14,13 @@ export default function Footer() {
               href="https://www.datocms.com/docs/next-js"
               className="mx-3 bg-black hover:bg-white hover:text-black border border-black text-white font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mb-6 lg:mb-0"
             >
-              Read Documentation
+              Discuss on Twitter
             </a>
             <a
               href="https://github.com/datocms/nextjs-demo"
               className="mx-3 font-bold hover:underline"
             >
-              View on GitHub
+              Contact me
             </a>
           </div>
         </div>

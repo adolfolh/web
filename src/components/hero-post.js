@@ -13,11 +13,11 @@ export default function HeroPost({
   slug,
 }) {
   return (
-    <section className="bg-cream transition ease-in-out delay-150 hover:bg-black hover:text-white">
-      <div className="mb-8 md:mb-16">
+    <section className="">
+      <div className="">
         <CoverImage title={title} fluid={coverImage.large} slug={slug} />
       </div>
-      <div className="mb-5 px-10 pb-10 md:mb-8">
+      <div className="pt-8 mb-5 px-10 pb-10 md:mb-8  bg-cream transition ease-in-out delay-150 hover:bg-black hover:text-white">
         <h3 className="mb-4 text-5xl lg:text-7xl leading-tight">
           <Link to={`/posts/${slug}`} className="hover:underline">
             {title}
