@@ -60,8 +60,8 @@ export const query = graphql`
         picture {
           gatsbyImageData(
             layout: FIXED
-            width: 48
-            height: 48
+            width: 32
+            height: 32
             imgixParams: { sat: -100 }
           )
         }
@@ -78,15 +78,15 @@ export const query = graphql`
         excerpt
         date
         coverImage {
-          small: gatsbyImageData(width: 760)
+          small: gatsbyImageData(width: 760, height: 760)
         }
         author {
           name
           picture {
             gatsbyImageData(
               layout: FIXED
-              width: 48
-              height: 48
+              width: 32
+              height: 32
               imgixParams: { sat: -100 }
             )
           }

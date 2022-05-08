@@ -6,10 +6,10 @@ export default function Avatar({ name, picture }) {
     <div className="flex items-center">
       <GatsbyImage
         image={picture.gatsbyImageData}
-        className="w-12 h-12 rounded-full mr-4"
+        className="w-10 h-10 rounded-full mr-4"
         alt={`Photo of ${name}`}
       />
-      <div className="text-xl font-bold">{name}</div>
+      <div className="text-sm font-semibold">{name}</div>
     </div>
   );
 }

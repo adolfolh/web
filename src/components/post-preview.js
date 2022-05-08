@@ -13,20 +13,24 @@ export default function PostPreview({
   slug,
 }) {
   return (
-    <div>
-      <div className="mb-5">
+    <div className={''}>
+      <div >
         <CoverImage slug={slug} title={title} fluid={coverImage.small} />
       </div>
-      <h3 className="text-3xl mb-3 leading-snug">
-        <Link to={`/posts/${slug}`} className="hover:underline">
-          {title}
+      <div className={'p-10 h-full cardbg'}>
+        <h3 className="text-3xl mb-3 leading-snug">
+          <Link to={`/posts/${slug}`} className="hover:underline visited:text-tomato">
+            {title}
+          </Link>
+        </h3>
+        <div className="uppercase text-sm mb-4 opacity-50">
+          <Date dateString={date} />
+        </div>
+        <p className="uppercase text-base leading-relaxed mb-4 font-semibold">{excerpt}</p>
+        <Link to="https://www.adolfolh.com">
+          <Avatar name={author?.name} picture={author?.picture} />
         </Link>
-      </h3>
-      <div className="text-lg mb-4">
-        <Date dateString={date} />
       </div>
-      <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-      <Avatar name={author?.name} picture={author?.picture} />
     </div>
   );
 }

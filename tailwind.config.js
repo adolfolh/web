@@ -2,6 +2,10 @@ module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    fontFamily: {
+      'display': ['FogTwoNo5, "Times New Roman", Times, serif'],
+      'body': ['neue metana,"Helvetica Neue", Arial']
+    },
     extend: {
       colors: {
         "accent-1": "#FAFAFA",
@@ -9,6 +13,12 @@ module.exports = {
         "accent-7": "#333",
         success: "#0070f3",
         cyan: "#79FFE1",
+        'tomato' : "#ff6347",
+        'vanilla' : '#f3ebe1',
+        'cream' : '#EDDCC8',
+        'skin' : '#E0C4A2',
+        'beige' : '#D3AC7C',
+        'celeste' : '#A2BEE0'
       },
       spacing: {
         28: "7rem",
@@ -29,6 +39,9 @@ module.exports = {
         small: "0 5px 10px rgba(0, 0, 0, 0.12)",
         medium: "0 8px 30px rgba(0, 0, 0, 0.12)",
       },
+      flex: {
+        'left': "0 0 20%",
+      }
     },
   },
   variants: {

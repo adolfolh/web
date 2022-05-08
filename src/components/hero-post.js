@@ -13,25 +13,24 @@ export default function HeroPost({
   slug,
 }) {
   return (
-    <section>
+    <section className="bg-cream transition ease-in-out delay-150 hover:bg-black hover:text-white">
       <div className="mb-8 md:mb-16">
         <CoverImage title={title} fluid={coverImage.large} slug={slug} />
       </div>
-      <div className="md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8 mb-20 md:mb-28">
-        <div>
-          <h3 className="mb-4 text-4xl lg:text-6xl leading-tight">
-            <Link to={`/posts/${slug}`} className="hover:underline">
-              {title}
-            </Link>
-          </h3>
-          <div className="mb-4 md:mb-0 text-lg">
-            <Date dateString={date} />
-          </div>
+      <div className="mb-5 px-10 pb-10 md:mb-8">
+        <h3 className="mb-4 text-5xl lg:text-7xl leading-tight">
+          <Link to={`/posts/${slug}`} className="hover:underline">
+            {title}
+          </Link>
+        </h3>
+        <div className="uppercase text-sm mb-4 opacity-50">
+          <Date dateString={date} />
         </div>
-        <div>
-          <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
+
+        <p className="uppercase text-lg leading-relaxed mb-4 font-semibold">{excerpt}</p>
+        <Link to="https://www.adolfolh.com">
           <Avatar name={author?.name} picture={author?.picture} />
-        </div>
+        </Link>
       </div>
     </section>
   );
