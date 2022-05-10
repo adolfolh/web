@@ -20,7 +20,10 @@ export default function Index({ data: { allPosts, site, blog } }) {
       <Container>
         <Layout>
           <HelmetDatoCms seo={blog.seo} favicon={site.favicon} />
-          <Intro />
+          <Intro 
+            title={'Blog.'} 
+            description={'A blog for all things Data, AI, Web and any other thing that I find interesting or worth sharing :)'}
+          />
           {heroPost && (
             <HeroPost
               title={heroPost.title}
@@ -31,7 +34,7 @@ export default function Index({ data: { allPosts, site, blog } }) {
               excerpt={heroPost.excerpt}
             />
           )}
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+          {morePosts.length > 0 && <MoreStories header="More Stories" posts={morePosts} />}
           <Footer></Footer>
         </Layout>
       </Container>

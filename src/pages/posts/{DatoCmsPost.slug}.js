@@ -4,7 +4,6 @@ import Header from "../../components/header";
 import MoreStories from "../../components/more-stories";
 import PostBody from "../../components/post-body";
 import PostHeader from "../../components/post-header";
-import SectionSeparator from "../../components/section-separator";
 import Footer from "../../components/footer";
 import Sidebar from "../../components/sidebar";
 import Layout from "../../components/layout"
@@ -29,8 +28,7 @@ export default function Post({ data: { site, post, morePosts } }) {
             />
             <PostBody content={post.content} />
           </article>
-          <SectionSeparator />
-          {morePosts.nodes.length > 0 && <MoreStories posts={morePosts.nodes} />}
+          {morePosts.nodes.length > 0 && <MoreStories header="More Stories" posts={morePosts.nodes} />}
 
           <Footer></Footer>
         </Layout>

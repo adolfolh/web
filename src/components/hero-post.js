@@ -33,7 +33,7 @@ export default function HeroPost({
           </Link>
           */}
 
-          <div className="border-2 border-black py-1 px-2 rounded-full w-max my-3">
+          <div className="pill2">
               5,000 views
           </div> 
         </div>

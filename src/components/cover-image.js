@@ -3,7 +3,7 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import cn from "classnames";
 import { Link } from "gatsby";
 
-export default function CoverImage({ title, fluid, slug }) {
+export default function CoverImage({ title, fluid, slug, hyperlink }) {
   const image = (
     <GatsbyImage 
       image={fluid}
@@ -20,6 +20,11 @@ export default function CoverImage({ title, fluid, slug }) {
       ) : (
         image
       )}
+      {hyperlink && 
+        <Link to={`${hyperlink}`} aria-label={title}>
+          {image}
+        </Link>
+      }
     </div>
   );
 }

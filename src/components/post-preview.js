@@ -21,7 +21,6 @@ export default function PostPreview({
         <div className={'text-black p-10 h-full cardbg'}>
           <h3 className="text-3xl mb-3 leading-snug hover:underline">
             {title}
-            
           </h3>
           <div className="uppercase text-sm mb-4 opacity-50">
             <Date dateString={date} />
@@ -34,7 +33,7 @@ export default function PostPreview({
           </Link>
           */}
 
-          <div className="border-2 border-black py-1 px-2 rounded-full w-max my-3 hover:border-white">
+          <div className="pill2">
               5,000 views
           </div> 
         </div>

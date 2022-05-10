@@ -12,10 +12,7 @@ module.exports = {
         'offwhite0' : "#f5f6f8",
         'offwhite1' : '#D6DBE4',
         'offwhite2' : '#e3e7ed',
-        'offwhite3' : '#f6f7f9',
-        'offwhite4' : '#98A5BC',
-        'offwhite5' : '#798AA8',
-        'offwhite6' : '#5E7090',
+        'offwhite3' : '#C4CCD9',
         'azure' : '#306EBF',
         black : '#111626',
         white: '#f5f6f8'

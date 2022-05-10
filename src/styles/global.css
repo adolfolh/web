@@ -23,9 +23,25 @@ body, input, select, textarea, p {
 }
 
 .checkered div:nth-child(even) .cardbg {
-  @apply bg-offwhite2 transition ease-in-out delay-150 hover:bg-black hover:text-white
+  @apply bg-offwhite3 transition ease-in-out delay-150 hover:bg-black hover:text-white
 }
 
 .checkered div:nth-child(odd) .cardbg {
-  @apply bg-offwhite3 transition ease-in-out delay-150 hover:bg-black hover:text-white 
+  @apply bg-offwhite2 transition ease-in-out delay-150 hover:bg-black hover:text-white 
+}
+
+.button {
+  @apply bg-black hover:bg-azure hover:text-white text-white font-bold py-2 px-12 lg:px-8 duration-200 transition-colors lg:mb-0
+}
+
+.button2 {
+  @apply bg-azure hover:bg-black hover:text-white text-white font-bold py-5 px-12 lg:px-8 duration-200 transition-colors lg:mb-0
+}
+
+.pill {
+  @apply border-2 border-black py-1 px-2 rounded-full w-max my-3 hover:border-azure hover:text-azure
+}
+
+.pill2 {
+  @apply border-2 border-black py-1 px-2 rounded-full w-max my-3
 }

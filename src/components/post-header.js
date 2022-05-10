@@ -15,7 +15,7 @@ export default function PostHeader({ title, coverImage, date, author }) {
           </Link>
           */}
 
-          <div className="border-2 border-black py-1 px-2 rounded-full w-max my-3">
+          <div className="pill2">
               5,000 views
           </div> 
       </div>
@@ -30,7 +30,7 @@ export default function PostHeader({ title, coverImage, date, author }) {
           </Link>
           */}
 
-          <div className="border-2 border-black py-1 px-2 rounded-full w-max my-3">
+          <div className="pill2">
               5,000 views
           </div>         
         </div>
