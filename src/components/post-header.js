@@ -9,14 +9,30 @@ export default function PostHeader({ title, coverImage, date, author }) {
     <>
       <PostTitle>{title}</PostTitle>
       <div className="hidden md:px-10 md:block md:mb-12">
-        <Avatar name={author?.name} picture={author?.picture} />
+                  {/** 
+          <Link to="https://www.adolfolh.com">
+            <Avatar name={author?.name} picture={author?.picture} />
+          </Link>
+          */}
+
+          <div className="border-2 border-black py-1 px-2 rounded-full w-max my-3">
+              5,000 views
+          </div> 
       </div>
       <div className="mb-8 md:mb-16 -mx-5 sm:mx-0">
         <CoverImage title={title} fluid={coverImage?.gatsbyImageData} />
       </div>
       <div className="px-5 max-w-2xl mx-auto">
         <div className="block md:hidden mb-6">
-          <Avatar name={author?.name} picture={author?.picture} />
+          {/** 
+          <Link to="https://www.adolfolh.com">
+            <Avatar name={author?.name} picture={author?.picture} />
+          </Link>
+          */}
+
+          <div className="border-2 border-black py-1 px-2 rounded-full w-max my-3">
+              5,000 views
+          </div>         
         </div>
         <div className="opacity-50 uppercase md:px-0 mb-6 text-lg">
           <Date dateString={date} />

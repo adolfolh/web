@@ -3,17 +3,16 @@
 @tailwind utilities;
 
 html {
-  @apply bg-vanilla
+  @apply bg-offwhite0 text-black
 }
 
 ::selection {
-	background: tomato; /* WebKit/Blink Browsers */
-  opacity: 1 !important;
-  }
-  ::-moz-selection {
-	background: tomato; /* Gecko Browsers */
-  opacity: 1 !important;
-  }
+  @apply bg-azure
+}
+
+::-moz-selection {
+	@apply bg-azure
+}
 
 h1, h2, h3, h4 h5, h6 {
   @apply font-display font-medium
@@ -24,9 +23,9 @@ body, input, select, textarea, p {
 }
 
 .checkered div:nth-child(even) .cardbg {
-  @apply bg-cream transition ease-in-out delay-150 hover:bg-tomato hover:text-white
+  @apply bg-offwhite2 transition ease-in-out delay-150 hover:bg-black hover:text-white
 }
 
 .checkered div:nth-child(odd) .cardbg {
-  @apply bg-skin transition ease-in-out delay-150 hover:bg-black hover:text-white
+  @apply bg-offwhite3 transition ease-in-out delay-150 hover:bg-black hover:text-white 
 }

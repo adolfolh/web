@@ -3,22 +3,22 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
-      'display': ['FogTwoNo5, "Times New Roman", Times, serif'],
+      'display': ['"VC Henrietta Trial", FogTwoNo5, "Times New Roman", Times, serif'],
       'body': ['neue metana,"Helvetica Neue", Arial']
     },
     extend: {
       colors: {
-        "accent-1": "#FAFAFA",
-        "accent-2": "#EAEAEA",
-        "accent-7": "#333",
-        success: "#0070f3",
-        cyan: "#79FFE1",
         'tomato' : "#ff6347",
-        'vanilla' : '#f3ebe1',
-        'cream' : '#EDDCC8',
-        'skin' : '#E0C4A2',
-        'beige' : '#D3AC7C',
-        'celeste' : '#A2BEE0'
+        'offwhite0' : "#f5f6f8",
+        'offwhite1' : '#D6DBE4',
+        'offwhite2' : '#e3e7ed',
+        'offwhite3' : '#f6f7f9',
+        'offwhite4' : '#98A5BC',
+        'offwhite5' : '#798AA8',
+        'offwhite6' : '#5E7090',
+        'azure' : '#306EBF',
+        black : '#111626',
+        white: '#f5f6f8'
       },
       spacing: {
         28: "7rem",

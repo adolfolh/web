@@ -1,5 +1,4 @@
 import React from "react";
-import { graphql } from "gatsby";
 import Container from "../../components/container";
 import Header from "../../components/header";
 import MoreStories from "../../components/more-stories";
@@ -7,16 +6,18 @@ import PostBody from "../../components/post-body";
 import PostHeader from "../../components/post-header";
 import SectionSeparator from "../../components/section-separator";
 import Footer from "../../components/footer";
-import Sidebar from "../../components/post-header";
+import Sidebar from "../../components/sidebar";
+import Layout from "../../components/layout"
 
 import { HelmetDatoCms } from "gatsby-source-datocms";
+import { graphql } from "gatsby";
 
 export default function Post({ data: { site, post, morePosts } }) {
   return (
     <div className="flex m-0">
-      <div className="bg-beige overflow-hidden md:w-64 md:fixed md:h-full md:overflow-auto"></div> {/* Should be replaced with the <Sidebar> component */}
+      <Sidebar></Sidebar>
       <Container>
-        <div className="ml-0 md:ml-64">
+        <Layout>
           <HelmetDatoCms seo={post.seo} favicon={site.favicon} />
           <Header />
           <article>
@@ -32,7 +33,7 @@ export default function Post({ data: { site, post, morePosts } }) {
           {morePosts.nodes.length > 0 && <MoreStories posts={morePosts.nodes} />}
 
           <Footer></Footer>
-        </div>
+        </Layout>
       </Container>
     </div>
   );

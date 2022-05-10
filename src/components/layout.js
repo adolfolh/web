@@ -1,7 +1,5 @@
 import React from "react";
 
-export default function Layout() {
-  return (
-    <div className=""></div>
-  )
+export default function Layout({ children }) {
+  return <div className="ml-0 md:ml-64">{ children }</div>
 }
