@@ -31,7 +31,7 @@ body, input, select, textarea, p {
 }
 
 .default-cardbg {
-  @apply bg-offwhite3 transition ease-in-out delay-150 hover:bg-black hover:text-white
+  @apply bg-offwhite2 transition ease-in-out delay-150 hover:bg-offwhite3
 }
 
 .checkered div:nth-child(even) .cardbg {

@@ -62,7 +62,7 @@ export const query = graphql`
         date
         coverImage {
           large: gatsbyImageData(width: 1500)
-          small: gatsbyImageData(width: 760, height: 760)
+          small: gatsbyImageData(width: 1500, height: 1500)
         }
         author {
           name

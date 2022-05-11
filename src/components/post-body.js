@@ -1,7 +1,7 @@
 import React from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { StructuredText } from "react-datocms";
-import PostPreview from "../components/post-preview";
+import PostPreviewInline from "../components/post-preview-inline";
 
 export default function PostBody({ content }) {
   console.log(content)
@@ -14,12 +14,14 @@ export default function PostBody({ content }) {
           renderInlineRecord={({ record }) => {
             if (record.__typename === 'DatoCmsPost') {
                 return (
-                  <PostPreview
+                  <PostPreviewInline
+                    className="w-full"
                     key={record.slug}
                     title={record.title}
                     coverImage={record.coverImage}
                     date={record.date}
                     slug={record.slug}
+                    excerpt={record.excerpt}
                   />
                 );
               }
