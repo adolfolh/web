@@ -45,3 +45,8 @@ body, input, select, textarea, p {
 .pill2 {
   @apply border-2 border-black py-1 px-2 rounded-full w-max my-3
 }
+
+button[disabled] {
+  cursor: not-allowed;
+  @apply hover:bg-tomato
+}
