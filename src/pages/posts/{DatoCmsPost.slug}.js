@@ -12,6 +12,7 @@ import { HelmetDatoCms } from "gatsby-source-datocms";
 import { graphql } from "gatsby";
 
 export default function Post({ data: { site, post, morePosts } }) {
+  console.log(post)
   return (
     <div className="flex m-0">
       <Sidebar></Sidebar>

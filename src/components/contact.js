@@ -5,7 +5,7 @@ const Contact = () => {
     const [disableSubmit,setDisableSubmit] = useState(true);
 
     return (
-        <div>
+        <div className="">
             <div className="p-10 mt-16">
                 <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">Get in touch.</h2>
                 <div className="md:px-10 p-0 md:flex">
@@ -18,7 +18,7 @@ const Contact = () => {
             </div>
 
             <div class="grid col-span-1 md:flex mt-10">
-                <section class="p-10 pr-16 md:w-9/12 md:overflow-auto bg-offwhite2">
+                <section class="p-10 pr-16 md:w-9/12 w-screen md:overflow-auto bg-offwhite2">
                     <form 
                         name="Contact Form"
                         method="POST"
@@ -61,7 +61,7 @@ const Contact = () => {
                 </section>
 
                 {/** SOCIALS AND MORE DETAILS */}
-                <section className="bg-offwhite3 p-10 w-fill">
+                <section className="bg-offwhite3 p-10 w-screen md:w-3/12">
                     <ul class="contact">
                         <li className="mb-10">
                             <h3>Location</h3>

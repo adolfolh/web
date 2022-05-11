@@ -13,13 +13,12 @@ export default function CoverImage({ title, fluid, slug, hyperlink }) {
   );
   return (
     <div className="-mx-5 sm:mx-0">
-      {slug ? (
+      {slug && 
         <Link to={`/posts/${slug}`} aria-label={title}>
           {image}
         </Link>
-      ) : (
-        image
-      )}
+      }
+
       {hyperlink && 
         <Link to={`${hyperlink}`} aria-label={title}>
           {image}

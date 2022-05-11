@@ -4,7 +4,6 @@ import { StructuredText } from "react-datocms";
 import PostPreviewInline from "../components/post-preview-inline";
 
 export default function PostBody({ content }) {
-  console.log(content)
   return (
     <div className="max-w-2xl mx-auto">
       <div className="px-5 md:px-0 prose prose-lg prose-blue">
@@ -15,7 +14,6 @@ export default function PostBody({ content }) {
             if (record.__typename === 'DatoCmsPost') {
                 return (
                   <PostPreviewInline
-                    className="w-full"
                     key={record.slug}
                     title={record.title}
                     coverImage={record.coverImage}
@@ -24,13 +22,13 @@ export default function PostBody({ content }) {
                     excerpt={record.excerpt}
                   />
                 );
-              }
-              return (
-                <>
-                  <p>Don't know how to render a block!</p>
-                  <pre>{JSON.stringify(record, null, 2)}</pre>
-                </>
-              );
+            }
+            return (
+              <>
+                <p>Don't know how to render a block!</p>
+                <pre>{JSON.stringify(record, null, 2)}</pre>
+              </>
+            );
           }}
 
           renderLinkToRecord={({ record, children, transformedMeta }) => {

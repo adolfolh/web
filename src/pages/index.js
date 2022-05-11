@@ -53,7 +53,7 @@ export default function Index({data: { allPosts, allProjects, site, blog }}) {
             projects={moreProjects} 
           />}
           <Link to="/projects">
-            <div className="button2 text-center">
+            <div className="button2 text-center md:w-full w-screen">
               <h3 className="text-2xl"> See more projects</h3>
             </div>
           </Link>
@@ -80,7 +80,7 @@ export default function Index({data: { allPosts, allProjects, site, blog }}) {
             posts={morePosts} 
           />}
           <Link to="/blog">
-            <div className="button2 text-center">
+            <div className="button2 text-center md:w-full w-screen">
               <h3 className="text-2xl"> See more articles</h3>
             </div>
           </Link>
@@ -134,6 +134,7 @@ export const query = graphql`
         title
         date
         excerpt
+        hyperlink
         coverImage {
           large: gatsbyImageData(width: 1500)
           small: gatsbyImageData(width: 700, height: 700)

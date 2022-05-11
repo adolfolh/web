@@ -18,7 +18,7 @@ const ThankYouPage = () => (
                 Go back home
         </div>
     </Link>
-    <div className="flex-col flex items-center mx-8 mt-16 md:mx-96">
+    <div className="flex-col flex items-center mx-8 my-16 md:mx-96">
         <img width="100" src={bear}></img>
     </div>
   </div>
