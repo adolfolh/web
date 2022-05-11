@@ -22,9 +22,9 @@ const Contact = () => (
                 <input type="hidden" name="form-name" value="Contact Form" />
                 <div class="grid col-span-1">
                     <div class="pb-3">
-                        <label className="font-bold uppercase" for="email">Email</label>
+                        <label className="font-bold uppercase" for="email">Email<span className="text-red">*</span></label>
                     </div>
-                    <input className="p-2" type="email" name="email" id="email-address" placeholder="name@email.com" required=""/>
+                    <input className="p-2" type="email" name="email" id="email-address" placeholder="name@email.com" required/>
 
                     <div class="pt-10 pb-3">
                         <label className="font-bold uppercase" for="message">Message</label>
@@ -32,8 +32,8 @@ const Contact = () => (
                     <textarea className="p-2" name="message" id="message" rows="5" placeholder="Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla nullam quis risus."></textarea>
 
                 </div>
-                <ul class="button2 text-center">
-                    <li><a href="" type="submit" value="Contact Form Submission" className="">Send Message</a></li>
+                <ul>
+                    <li><button type="submit" value="Contact Form Submission" className="button2 text-center w-full">Send Message</button></li>
                 </ul>
                 </form>
             </section>

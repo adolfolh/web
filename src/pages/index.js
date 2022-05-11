@@ -8,8 +8,8 @@ import MoreStories from "../components/more-stories";
 import MoreProjects from "../components/more-projects";
 import Contact from "../components/contact";
 
-import smiley from "../assets/smiley-02.svg"
-import star from "../assets/star-01.svg"
+import smiley from "../assets/smile.svg"
+import star from "../assets/star.svg"
 
 import { Link } from "gatsby";
 import { HelmetDatoCms } from "gatsby-source-datocms";
