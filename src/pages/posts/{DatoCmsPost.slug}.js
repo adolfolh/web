@@ -52,6 +52,18 @@ export const query = graphql`
       slug
       content {
         value
+        links {
+          __typename
+          ... on DatoCmsPost {
+            slug
+            title
+            date
+            coverImage {
+              small: gatsbyImageData(width: 760, height: 200)
+            }
+            id : originalId
+          }
+        }
         blocks {
           __typename
           id: originalId
@@ -75,6 +87,7 @@ export const query = graphql`
           )
         }
       }
+
     }
     morePosts: allDatoCmsPost(
       sort: { fields: date, order: DESC }

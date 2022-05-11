@@ -17,8 +17,8 @@ export default function PostPreview({
       <div >
         <CoverImage slug={slug} title={title} fluid={coverImage.small} />
       </div>
-      <Link to={`/posts/${slug}`}>
-        <div className={'text-black p-10 h-full cardbg'}>
+      <Link style={{textDecoration: 'none'}} to={`/posts/${slug}`}>
+        <div className={'text-black p-10 h-full default-cardbg cardbg'}>
           <h3 className="text-3xl mb-3 leading-snug hover:underline">
             {title}
           </h3>

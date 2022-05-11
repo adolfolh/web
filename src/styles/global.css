@@ -14,12 +14,24 @@ html {
 	@apply bg-azure
 }
 
+input {
+  border-radius: 0;
+}
+
+input[type="search"] {
+  -webkit-appearance: none;
+}
+
 h1, h2, h3, h4 h5, h6 {
   @apply font-display font-medium
 }
 
 body, input, select, textarea, p {
   @apply font-body
+}
+
+.default-cardbg {
+  @apply bg-offwhite3 transition ease-in-out delay-150 hover:bg-black hover:text-white
 }
 
 .checkered div:nth-child(even) .cardbg {
