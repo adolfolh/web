@@ -42,7 +42,7 @@ const Contact = () => {
                     <ul>
                         <li>
                             <ReCAPTCHA 
-                                sitekey="{process.env.GATSBY_RECAPTCHA_KEY}" 
+                                sitekey="6LfKu98fAAAAAFiQgf6MgyyokJNIbkhzk62-AKV4" 
                                 size="normal"
                                 id="recaptcha-google"
                                 onChange={useCallback(() => {setDisableSubmit(false)}, [],)}

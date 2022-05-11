@@ -12,7 +12,7 @@ export default function MoreStories({ posts, header, desc }) {
         {desc}
         </p>
       </div>}
-      <div className="checkered overflow-hidden grid grid-cols-1 md:grid-cols-3">
+      <div className="checkered overflow-hidden grid grid-cols-1 md:flex md:flex-wrap">
         {posts.map(post => (
           <PostPreview
             key={post.slug}
