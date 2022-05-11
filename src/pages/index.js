@@ -47,7 +47,11 @@ export default function Index({data: { allPosts, allProjects, site, blog }}) {
               </div>
             </div>
           </div>
-          {moreProjects.length > 0 && <MoreProjects header="My Projects." projects={moreProjects} />}
+          {moreProjects.length > 0 && <MoreProjects 
+            header="My Projects." 
+            desc="Lorem Ipsum is simply dummy text of the printing and since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+            projects={moreProjects} 
+          />}
           <Link to="/projects">
             <div className="button2 text-center">
               <h3 className="text-2xl"> See more projects</h3>
@@ -70,7 +74,11 @@ export default function Index({data: { allPosts, allProjects, site, blog }}) {
             <img src={star} width="150" className="hidden md:block pl-16"></img>
           </div>
 
-          {morePosts.length > 0 && <MoreStories header="My Articles." posts={morePosts} />}
+          {morePosts.length > 0 && <MoreStories 
+            header="My Articles." 
+            desc="Dummy text of the printing and typeset dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic."
+            posts={morePosts} 
+          />}
           <Link to="/blog">
             <div className="button2 text-center">
               <h3 className="text-2xl"> See more articles</h3>

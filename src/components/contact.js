@@ -4,11 +4,13 @@ const Contact = () => (
     <div>
         <div className="p-10 mt-16">
             <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">Get in touch.</h2>
-            <p>
-                If you are interested in working with me you can send me an 
-                email using the form below or reach out to me through my 
-                social media accounts.
-            </p>
+            <div className="md:px-10 p-0 md:flex">
+                <p className="text-justify leading-loose text-sm md:text-xl">
+                    If you are interested in working with me you can send me an 
+                    email using the form below or reach out to me through my 
+                    social media accounts.
+                </p>
+            </div>
         </div>
 
         <div class="grid col-span-1 md:flex mt-10">
@@ -22,7 +24,7 @@ const Contact = () => (
                 <input type="hidden" name="form-name" value="Contact Form" />
                 <div class="grid col-span-1">
                     <div class="pb-3">
-                        <label className="font-bold uppercase" for="email">Email<span className="text-red">*</span></label>
+                        <label className="font-bold uppercase" for="email">Email<span className="text-red-600">*</span></label>
                     </div>
                     <input className="p-2" type="email" name="email" id="email-address" placeholder="name@email.com" required/>
 

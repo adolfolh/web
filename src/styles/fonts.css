@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'VC Henrietta Trial';
+    src: url('../assets/fonts/VCHenrietta-Light.woff2') format('woff2'),
+        url('../assets/fonts/VCHenrietta-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'VC Henrietta Trial';
+    src: url('../assets/fonts/VCHenrietta-Regular.woff2') format('woff2'),
+        url('../assets/fonts/VCHenrietta-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'VC Henrietta Trial';
+    src: url('../assets/fonts/VCHenrietta-SemiBold.woff2') format('woff2'),
+        url('../assets/fonts/VCHenrietta-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'VC Henrietta Trial';
+    src: url('../assets/fonts/VCHenrietta-Medium.woff2') format('woff2'),
+        url('../assets/fonts/VCHenrietta-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'VC Henrietta Trial';
+    src: url('../assets/fonts/VCHenrietta-Bold.woff2') format('woff2'),
+        url('../assets/fonts/VCHenrietta-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neue Metana';
+    src: url('../assets/fonts/NeueMetana-Regular.woff2') format('woff2'),
+        url('../assets/fonts/NeueMetana-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neue Metana';
+    src: url('../assets/fonts/NeueMetana-Bold.woff2') format('woff2'),
+        url('../assets/fonts/NeueMetana-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
