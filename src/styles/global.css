@@ -56,12 +56,16 @@ body, input, select, textarea, p {
   @apply bg-offwhite2
 }
 
+.navbutton{
+  @apply bg-black hover:bg-azure hover:text-white text-white py-2 duration-200 transition-all lg:mb-0 text-sm
+}
+
 .button {
-  @apply bg-black hover:bg-azure hover:text-white text-white font-bold py-2 px-12 lg:px-8 duration-200 transition-colors lg:mb-0
+  @apply bg-black hover:bg-azure hover:text-white text-white font-bold py-2 px-12 lg:px-8 duration-200 transition-all lg:mb-0
 }
 
 .button2 {
-  @apply bg-azure hover:bg-black hover:text-white text-white font-bold py-5 px-12 lg:px-8 duration-200 transition-colors lg:mb-0
+  @apply bg-azure hover:bg-black hover:text-white text-white font-bold py-5 px-12 lg:px-8 duration-200 transition-all lg:mb-0
 }
 
 .pill {
@@ -74,5 +78,25 @@ body, input, select, textarea, p {
 
 button[disabled] {
   cursor: not-allowed;
-  @apply hover:bg-tomato
+  @apply hover:bg-tomato w-full
+}
+
+.sidebar {
+  @apply transition-all ease-in-out duration-500 ease-in-out delay-150 z-50
+}
+
+.layout-hover {
+  @apply transition-all ease-in-out duration-500 ease-in-out delay-150
+}
+
+.sidebar:hover{
+  @apply md:w-64
+}
+
+.sidebar:hover ~ .layout-hover {
+  @apply opacity-50 md:ml-64
+}
+
+.icon {
+  @apply float-left w-16
 }

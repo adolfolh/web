@@ -1,6 +1,13 @@
 import React, { useState, useCallback } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 
+import { faTwitter } from "@fortawesome/free-brands-svg-icons"
+import { faGithub } from "@fortawesome/free-brands-svg-icons"
+import { faInstagram } from "@fortawesome/free-brands-svg-icons"
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons"
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 const Contact = () => {  
     const [disableSubmit,setDisableSubmit] = useState(true);
 
@@ -75,11 +82,11 @@ const Contact = () => {
                         </li>
                         <li className="mb-10">
                             <h3>Social</h3>
-                            <ul class="icons">
-                                <li><a target="_blank" rel="noreferrer" href="https://www.twitter.com/adolfoolh" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-                                <li><a target="_blank" rel="noreferrer" href="https://www.github.com/adolfolh" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-                                <li><a target="_blank" rel="noreferrer" href="https://www.instagram.com/adolfo.lh" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-                                <li><a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/adolfo-l%C3%B3pez-herrera-0042a61b5" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+                            <ul className="flex">
+                                <li><a className="pr-2 h-2 w-2" target="_blank" rel="noreferrer" href="https://www.twitter.com/adolfoolh"><span class="label"><FontAwesomeIcon icon={faTwitter} /></span></a></li>
+                                <li><a className="pr-2 h-2 w-2" target="_blank" rel="noreferrer" href="https://www.github.com/adolfolh"><span class="label"><FontAwesomeIcon icon={faGithub} /></span></a></li>
+                                <li><a className="pr-2 h-2 w-2" target="_blank" rel="noreferrer" href="https://www.instagram.com/adolfo.lh" ><span class="label"><FontAwesomeIcon icon={faInstagram} /></span></a></li>
+                                <li><a className="pr-2 h-2 w-2" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/adolfo-l%C3%B3pez-herrera-0042a61b5"><span class="label"><FontAwesomeIcon icon={faLinkedin} /></span></a></li>
                             </ul>
                         </li>
                     </ul>

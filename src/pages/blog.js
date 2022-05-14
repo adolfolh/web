@@ -17,27 +17,25 @@ export default function Index({ data: { allPosts, site, blog } }) {
   return (
     <div className="flex">
       <Sidebar></Sidebar>
-      <Container>
-        <Layout>
-          <HelmetDatoCms seo={blog.seo} favicon={site.favicon} />
-          <Intro 
-            title={'Blog.'} 
-            description={'A blog for all things Data, AI, Web and any other thing that I find interesting or worth sharing :)'}
+      <Layout>
+        <HelmetDatoCms seo={blog.seo} favicon={site.favicon} />
+        <Intro 
+          title={'Blog.'} 
+          description={'A blog for all things Data, AI, Web and any other thing that I find interesting or worth sharing :)'}
+        />
+        {heroPost && (
+          <HeroPost
+            title={heroPost.title}
+            coverImage={heroPost.coverImage}
+            date={heroPost.date}
+            author={heroPost.author}
+            slug={heroPost.slug}
+            excerpt={heroPost.excerpt}
           />
-          {heroPost && (
-            <HeroPost
-              title={heroPost.title}
-              coverImage={heroPost.coverImage}
-              date={heroPost.date}
-              author={heroPost.author}
-              slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
-            />
-          )}
-          {morePosts.length > 0 && <MoreStories header="More Stories" posts={morePosts} />}
-          <Footer></Footer>
-        </Layout>
-      </Container>
+        )}
+        {morePosts.length > 0 && <MoreStories header="More Stories" posts={morePosts} />}
+        <Footer></Footer>
+      </Layout>
     </div>
   );
 }

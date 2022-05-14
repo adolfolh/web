@@ -16,24 +16,22 @@ export default function Post({ data: { site, post, morePosts } }) {
   return (
     <div className="flex m-0">
       <Sidebar></Sidebar>
-      <Container>
-        <Layout>
-          <HelmetDatoCms seo={post.seo} favicon={site.favicon} />
-          <Header />
-          <article>
-            <PostHeader
-              title={post.title}
-              coverImage={post.coverImage}
-              date={post.date}
-              author={post.author}
-            />
-            <PostBody content={post.content} />
-          </article>
-          {morePosts.nodes.length > 0 && <MoreStories header="More Stories" posts={morePosts.nodes} />}
+      <Layout>
+        <HelmetDatoCms seo={post.seo} favicon={site.favicon} />
+        <Header />
+        <article>
+          <PostHeader
+            title={post.title}
+            coverImage={post.coverImage}
+            date={post.date}
+            author={post.author}
+          />
+          <PostBody content={post.content} />
+        </article>
+        {morePosts.nodes.length > 0 && <MoreStories header="More Stories" posts={morePosts.nodes} />}
 
-          <Footer></Footer>
-        </Layout>
-      </Container>
+        <Footer></Footer>
+      </Layout>
     </div>
   );
 }
