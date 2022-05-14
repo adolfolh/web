@@ -16,6 +16,9 @@ export default function Index({ data: { allPosts, site, blog } }) {
 
   return (
     <div className="flex">
+      <div className="md:hidden block top-0 w-full">
+        <NavButtons></NavButtons>
+      </div>
       <Sidebar></Sidebar>
       <Layout>
         <HelmetDatoCms seo={blog.seo} favicon={site.favicon} />

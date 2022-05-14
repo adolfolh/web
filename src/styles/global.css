@@ -94,7 +94,7 @@ button[disabled] {
 }
 
 .sidebar:hover ~ .layout-hover {
-  @apply opacity-50 md:ml-64
+  @apply opacity-50 blur-lg /*md:ml-64*/
 }
 
 .icon {
