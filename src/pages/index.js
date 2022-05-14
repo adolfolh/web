@@ -7,7 +7,7 @@ import Intro from "../components/intro";
 import MoreStories from "../components/more-stories";
 import MoreProjects from "../components/more-projects";
 import Contact from "../components/contact";
-import NavButtons from '../nav-buttons'
+import NavButtons from '../components/nav-buttons'
 
 import eye from "../assets/eye.svg"
 import star from "../assets/star.svg"
