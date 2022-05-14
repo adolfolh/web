@@ -36,12 +36,12 @@ const Contact = () => {
                     <input type="hidden" name="form-name" value="Contact Form" />
                     <div class="grid col-span-1">
                         <div class="pb-3">
-                            <label className="font-bold uppercase" htmlFor="email">Email<span className="text-red-600">*</span></label>
+                            <label className="font-bold uppercase font-accent" htmlFor="email">Email<span className="text-red-600">*</span></label>
                         </div>
                         <input className="p-2" type="email" name="email" id="email-address" placeholder="name@email.com" required/>
 
                         <div class="pt-10 pb-3">
-                            <label className="font-bold uppercase" htmlFor="message">Message</label>
+                            <label className="font-bold uppercase font-accent" htmlFor="message">Message</label>
                         </div>
                         <textarea className="p-2 mb-8" name="message" id="message" rows="5" placeholder="Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla nullam quis risus."></textarea>
 

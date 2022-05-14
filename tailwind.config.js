@@ -4,8 +4,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
-      'display': ['"VC Henrietta Trial", "Times New Roman", Times, serif'],
-      'body': ['neue metana,"Helvetica Neue", Arial']
+      'display': ['"VC Henrietta Trial", sans'],
+      'body': ['Violet Sans,"Helvetica Neue", Arial'],
+      'accent' : ['neue metana, Violet Sans,"Helvetica Neue", Arial'],
     },
     extend: {
       colors: {

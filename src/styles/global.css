@@ -57,23 +57,24 @@ body, input, select, textarea, p {
 }
 
 .navbutton{
-  @apply bg-black hover:bg-azure hover:text-white text-white py-2 duration-200 transition-all lg:mb-0 text-sm
+  @apply bg-black text-white hover:text-azure md:py-4 duration-200 transition-all lg:mb-0 text-sm
 }
 
 .button {
-  @apply bg-black hover:bg-azure hover:text-white text-white font-bold py-2 px-12 lg:px-8 duration-200 transition-all lg:mb-0
+  @apply bg-black hover:bg-azure hover:text-white text-white font-bold py-2 px-12 lg:px-8 duration-200 transition-all lg:mb-0 font-accent
 }
 
 .button2 {
-  @apply bg-azure hover:bg-black hover:text-white text-white font-bold py-5 px-12 lg:px-8 duration-200 transition-all lg:mb-0
+  @apply bg-azure hover:bg-black hover:text-white text-white font-bold py-5 px-12 lg:px-8 duration-200 transition-all lg:mb-0 font-accent
 }
 
 .pill {
-  @apply border-2 border-black py-1 px-2 rounded-full w-max my-3 hover:border-azure hover:text-azure
+  @apply border-2 border-black py-1 px-2 rounded-full w-max my-3 hover:border-azure hover:text-azure font-accent
 }
 
 .pill2 {
-  @apply border-2 border-black py-1 px-2 rounded-full w-max my-3
+  border-width: 1px;
+  @apply border-black py-1 px-2 rounded-full w-max my-3 font-accent text-xs
 }
 
 button[disabled] {
@@ -81,10 +82,19 @@ button[disabled] {
   @apply hover:bg-tomato w-full
 }
 
+button[disabled] .navbutton{
+  cursor: not-allowed;
+  @apply hover:text-tomato w-full
+}
+
+/*
 .sidebar {
   @apply transition-all ease-in-out duration-500 ease-in-out delay-150 z-50
 }
 
+.sidebar:hover{
+  @apply md:w-64
+}
 .layout-hover {
   @apply transition-all ease-in-out duration-500 ease-in-out delay-150
 }
@@ -94,8 +104,10 @@ button[disabled] {
 }
 
 .sidebar:hover ~ .layout-hover {
-  @apply opacity-50 blur-lg /*md:ml-64*/
+  filter: blur(16px);
+  @apply opacity-50 md:ml-64
 }
+*/
 
 .icon {
   @apply float-left w-16

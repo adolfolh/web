@@ -9,7 +9,7 @@ export default function Intro({
       <h1 className="text-6xl md:text-9xl font-bold tracking-tighter leading-tight md:pr-8">
         {title}
       </h1>
-      <h4 className="text-center md:text-right text-lg mt-5 md:pl-8">
+      <h4 className="text-center md:text-right text-lg mt-5 md:pl-8 font-accent">
        {description}
       </h4>
     </section>

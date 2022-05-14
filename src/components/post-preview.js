@@ -14,8 +14,8 @@ export default function PostPreview({
 }) {
   return (
     <div className={'flex-grow w-screen md:w-1/3 preview'}>
-      <div >
-        <CoverImage slug={slug} title={title} fluid={coverImage.small} />
+      <div>
+        <CoverImage className="max-h-80 h-auto" slug={slug} title={title} fluid={coverImage.small} />
       </div>
       <Link style={{textDecoration: 'none'}} to={`/posts/${slug}`}>
         <div className={'text-black p-10 h-full cardbg'}>
@@ -25,7 +25,7 @@ export default function PostPreview({
           <div className="uppercase text-sm mb-4 opacity-50">
             <Date dateString={date} />
           </div>
-          <p className="uppercase text-base leading-relaxed mb-4 font-semibold">{excerpt}</p>
+          <p className="text-base leading-relaxed mb-4 font-semibold">{excerpt}</p>
 
           {/** 
           <Link to="https://www.adolfolh.com">

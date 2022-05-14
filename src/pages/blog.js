@@ -18,12 +18,12 @@ export default function Index({ data: { allPosts, site, blog } }) {
 
   return (
     <div className="flex">
-      <div className="md:hidden block top-0 w-full">
-        <NavButtons></NavButtons>
-      </div>
       <Sidebar></Sidebar>
       <Layout>
         <HelmetDatoCms seo={blog.seo} favicon={site.favicon} />
+        <div className="md:hidden block top-0 w-full">
+          <NavButtons></NavButtons>
+        </div>
         <Intro 
           title={'Blog.'} 
           description={'A blog for all things Data, AI, Web and any other thing that I find interesting or worth sharing :)'}
@@ -65,7 +65,7 @@ export const query = graphql`
         date
         coverImage {
           large: gatsbyImageData(width: 1500)
-          small: gatsbyImageData(width: 1500, height: 1500)
+          small: gatsbyImageData(width: 300, height: 250)
         }
         author {
           name

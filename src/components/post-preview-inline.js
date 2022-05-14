@@ -25,7 +25,7 @@ export default function PostPreviewInline({
           <div className="uppercase text-sm mb-4 opacity-50">
             <Date dateString={date} />
           </div>
-          <p className="uppercase text-base leading-relaxed mb-4 font-semibold">{excerpt}</p>
+          <p className="text-base leading-relaxed mb-4 font-semibold">{excerpt}</p>
 
           {/** 
           <Link to="https://www.adolfolh.com">

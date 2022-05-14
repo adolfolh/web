@@ -23,7 +23,7 @@ export default function ProjectPreview({
               {title}
             </h3>
 
-            <p className="uppercase text-base leading-relaxed mb-4 font-semibold">{excerpt}</p>
+            <p className="text-base leading-relaxed mb-4 font-semibold">{excerpt}</p>
 
             {/** 
             <Link to="https://www.adolfolh.com">

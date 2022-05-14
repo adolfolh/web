@@ -26,7 +26,7 @@ export default function HeroPost({
             <Date dateString={date} />
           </div>
 
-          <p className="uppercase text-lg leading-relaxed mb-4 font-semibold">{excerpt}</p>
+          <p className="text-lg leading-relaxed mb-4 font-semibold">{excerpt}</p>
           {/** 
           <Link to="https://www.adolfolh.com">
             <Avatar name={author?.name} picture={author?.picture} />

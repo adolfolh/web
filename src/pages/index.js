@@ -9,7 +9,7 @@ import MoreProjects from "../components/more-projects";
 import Contact from "../components/contact";
 import NavButtons from '../components/nav-buttons'
 
-import eye from "../assets/eye.svg"
+import smile from "../assets/smile.svg"
 import star from "../assets/star.svg"
 
 import { Link } from "gatsby";
@@ -22,13 +22,13 @@ export default function Index({data: { allPosts, allProjects, site, blog }}) {
 
   return (
     <div className="flex">
-      <div className="md:hidden block top-0 w-full">
-        <NavButtons></NavButtons>
-      </div>
       <Sidebar></Sidebar>
       <Layout>
         <HelmetDatoCms seo={blog.seo} favicon={site.favicon} />
         {/* Index Content */}
+        <div className="md:hidden block top-0 w-full">
+          <NavButtons></NavButtons>
+        </div>
         <div className="xl:h-screen xl:items-center xl:flex items-baseline">
           <div>
             <Intro 
@@ -50,6 +50,7 @@ export default function Index({data: { allPosts, allProjects, site, blog }}) {
             </div>
           </div>
         </div>
+
         {moreProjects.length > 0 && <MoreProjects 
           header="My Projects." 
           desc="Lorem Ipsum is simply dummy text of the printing and since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
@@ -60,12 +61,12 @@ export default function Index({data: { allPosts, allProjects, site, blog }}) {
             <h3 className="text-2xl"> See more projects</h3>
           </div>
         </Link>
-
+        
         <h2 className="p-10 mb-8 mt-16 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
             My Interests.
         </h2>
         <div className="px-10 pt-0 mb-16 md:px-32 md:flex">
-          <img src={eye} width="150" className="hidden md:block pr-16"></img>
+          <img src={smile} width="150" className="hidden md:block pr-16"></img>
           <p className="text-justify leading-loose text-sm md:text-xl">
           Lorem Ipsum is simply dummy text of the printing and since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.
           </p>
@@ -116,7 +117,7 @@ export const query = graphql`
         date
         coverImage {
           large: gatsbyImageData(width: 1500)
-          small: gatsbyImageData(width: 760, height: 760)
+          small: gatsbyImageData(width: 700, height: 700)
         }
         author {
           name
