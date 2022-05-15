@@ -5,7 +5,7 @@ export default function Intro({
   description,
 }) {
   return (
-    <section className="px-10 flex-col md:flex-row flex items-center md:justify-between mt-16 mb-16 md:mb-12">
+    <section className="px-10 flex-col md:flex-row flex items-center md:justify-between mt-28 mb-12 md:mt-36 md:mb-24">
       <h1 className="text-6xl md:text-9xl font-bold tracking-tighter leading-tight md:pr-8">
         {title}
       </h1>

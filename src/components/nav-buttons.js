@@ -15,16 +15,16 @@ export default function NavButtons() {
                 <p className="font-bold overflow-hidden">Home</p>
             </div>
         </Link>
-        <Link to="/blog">
-            <div className={'text-left navbutton'}>
-                <div className="icon text-center"><FontAwesomeIcon icon={faPenToSquare} /></div>   
-                <p className="font-bold overflow-hidden">Blog</p>
-            </div>
-        </Link>
         <Link to="/portfolio">
             <div className={'text-left navbutton'}>
                 <div className="icon text-center"><FontAwesomeIcon icon={faClipboard} /></div>
                 <p className="font-bold overflow-hidden">Projects</p>
+            </div>
+        </Link>
+        <Link to="/blog">
+            <div className={'text-left navbutton'} disabled>
+                <div className="icon text-center"><FontAwesomeIcon icon={faPenToSquare} /></div>   
+                <p className="font-bold overflow-hidden">Blog</p>
             </div>
         </Link>
     </div>

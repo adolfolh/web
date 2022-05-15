@@ -15,11 +15,13 @@ export default function MoreProjects({ projects, header, desc }) {
       <div className="checkered overflow-hidden grid grid-cols-1">
         {projects.map(project => (
           <ProjectPreview
+            key={project.hyperlink}
             title={project.title}
             coverImage={project.coverImage}
             date={project.date}
             excerpt={project.excerpt}
             hyperlink={project.hyperlink}
+            category={project.category}
           />
         ))}
       </div>

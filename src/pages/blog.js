@@ -1,5 +1,4 @@
 import React from "react";
-import Container from "../components/container";
 import HeroPost from "../components/hero-post";
 import Intro from "../components/intro";
 import MoreStories from "../components/more-stories";
@@ -7,6 +6,7 @@ import Footer from "../components/footer";
 import Sidebar from "../components/sidebar";
 import Layout from "../components/layout"
 import Navbar from '../components/navbar'
+import Search from '../components/SearchContainer'
 
 import { HelmetDatoCms } from "gatsby-source-datocms";
 import { graphql } from "gatsby";
@@ -20,6 +20,7 @@ export default function Blog({ data: { allPosts, site, blog } }) {
       <Sidebar></Sidebar>
       <Layout>
         <HelmetDatoCms seo={blog.seo} favicon={site.favicon} />
+        <Search data={allPosts} searchType='Blog'></Search>
         <Navbar></Navbar>
         <Intro 
           title={'Blog.'} 
@@ -62,7 +63,7 @@ export const query = graphql`
         date
         coverImage {
           large: gatsbyImageData(width: 1500)
-          small: gatsbyImageData(width: 700, height: 700)
+          small: gatsbyImageData(width: 700)
         }
         author {
           name

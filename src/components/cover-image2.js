@@ -12,9 +12,9 @@ export default function CoverImage2({ title, fluid, hyperlink }) {
   return (
     <div className="-mx-5 sm:mx-0">
       {hyperlink ? (
-        <Link to={hyperlink} aria-label={title}>
+        <a href={hyperlink} aria-label={title}>
           {image}
-        </Link>
+        </a>
       ) : (
         image
       )}

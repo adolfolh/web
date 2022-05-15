@@ -14,14 +14,14 @@ export default function Navbar() {
                 <div className="p-5 text-white active:text-azure text-xl"><FontAwesomeIcon icon={faCompass} /></div>
             </div>
         </Link>
-        <Link to="/blog">
-            <div>
-                <div className="p-5 text-white active:text-azure text-xl "><FontAwesomeIcon icon={faPenToSquare} /></div>
-            </div>
-        </Link>
         <Link to="/portfolio">
             <div>
                 <div className="p-5 text-white active:text-azure text-xl "><FontAwesomeIcon icon={faClipboard} /></div>
+            </div>
+        </Link>
+        <Link to="/blog">
+            <div>
+                <div className="p-5 text-white active:text-azure text-xl "><FontAwesomeIcon icon={faPenToSquare} /></div>
             </div>
         </Link>
     </div>

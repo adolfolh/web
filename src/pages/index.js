@@ -15,7 +15,7 @@ import { Link } from "gatsby";
 import { HelmetDatoCms } from "gatsby-source-datocms";
 import { graphql } from "gatsby";
 
-export default function Index({data: { allPosts, allProjects, site, blog, resume }}) {
+export default function Index({data: { allPosts, allProjects, site, index, resume }}) {
   const morePosts = allPosts.nodes.slice(0);
   const moreProjects = allProjects.nodes.slice(0);
 
@@ -23,7 +23,7 @@ export default function Index({data: { allPosts, allProjects, site, blog, resume
     <div className="flex">
       <Sidebar></Sidebar>
       <Layout>
-        <HelmetDatoCms seo={blog.seo} favicon={site.favicon} />
+        <HelmetDatoCms seo={index.seo} favicon={site.favicon} />
         {/* Index Content */}
         <Navbar></Navbar>
         <div className="xl:h-screen xl:items-center xl:flex items-baseline">
@@ -40,7 +40,7 @@ export default function Index({data: { allPosts, allProjects, site, blog, resume
                 science and AI.
               </p>
               <div className="mt-8">
-                <a href={resume} className="pill">
+                <a href={resume.file.url} className="pill">
                   Download resume
                 </a>
               </div>
@@ -53,7 +53,7 @@ export default function Index({data: { allPosts, allProjects, site, blog, resume
           desc="Lorem Ipsum is simply dummy text of the printing and since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
           projects={moreProjects} 
         />}
-        <Link to="/projects">
+        <Link to="/portfolio">
           <div className="button2 text-center w-full">
             <h3 className="text-2xl"> See more projects</h3>
           </div>
@@ -101,7 +101,7 @@ export const query = graphql`
         ...GatsbyDatoCmsFaviconMetaTags
       }
     }
-    blog: datoCmsBlog {
+    index: datoCmsIndex {
       seo: seoMetaTags {
         ...GatsbyDatoCmsSeoMetaTags
       }
@@ -138,6 +138,9 @@ export const query = graphql`
         coverImage {
           large: gatsbyImageData(width: 1500)
           small: gatsbyImageData(width: 700, height: 700)
+        }
+        category {
+          name
         }
       }
     }

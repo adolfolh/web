@@ -15,11 +15,26 @@ html {
 }
 
 input {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+}
+
+.no-outline:focus {
+  outline: none;
+}
+
+input {
   border-radius: 0;
 }
 
 input[type="search"] {
   -webkit-appearance: none;
+}
+
+input:focus, textarea:focus, select:focus{
+  outline: none;
 }
 
 h1, h2, h3, h4 h5, h6 {

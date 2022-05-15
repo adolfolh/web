@@ -7,13 +7,14 @@ export default function ProjectPreview({
   coverImage,
   excerpt,
   hyperlink,
+  category,
 }) {
   return (
     <div className={'grid grid-cols-1 w-full md:flex preview'}>
       <div >
         <CoverImage title={title} hyperlink={hyperlink} fluid={coverImage.small} />
       </div>
-      <Link className="w-full" to={hyperlink}>
+      <a className="w-full" href={hyperlink}>
         <div className={'text-black p-10 xl:p-20 cardbg h-full items-center flex'}>
           <div>
             <h3 className="text-5xl mb-3 leading-snug hover:underline">
@@ -29,11 +30,11 @@ export default function ProjectPreview({
             */}
 
             <div className="pill2">
-                Machine Learning
+                {category.name}
             </div> 
           </div>
         </div>
-      </Link>
+      </a>
     </div>
   );
 }

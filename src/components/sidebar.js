@@ -3,13 +3,6 @@ import { Link } from "gatsby";
 import NavButtons from './nav-buttons'
 import Logo from "../assets/eye.svg"
 
-import { faMedium } from "@fortawesome/free-brands-svg-icons"
-import { faGithub } from "@fortawesome/free-brands-svg-icons"
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons"
-
-import { faCalendar } from "@fortawesome/free-regular-svg-icons"
-import { faNewspaper } from "@fortawesome/free-regular-svg-icons"
-import { faSadCry } from "@fortawesome/free-regular-svg-icons"
 import { faShareFromSquare } from "@fortawesome/free-regular-svg-icons"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
