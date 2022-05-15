@@ -2,7 +2,7 @@ import React from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 
-export default function CoverImage({ title, fluid, slug }) {
+export default function CoverImage2({ title, fluid, hyperlink }) {
   const image = (
     <GatsbyImage 
       image={fluid}
@@ -11,8 +11,8 @@ export default function CoverImage({ title, fluid, slug }) {
   );
   return (
     <div className="-mx-5 sm:mx-0">
-      {slug ? (
-        <Link to={`/posts/${slug}`} aria-label={title}>
+      {hyperlink ? (
+        <Link to={hyperlink} aria-label={title}>
           {image}
         </Link>
       ) : (

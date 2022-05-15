@@ -1,13 +1,10 @@
 import React from "react";
-import Avatar from "../components/avatar";
-import Date from "../components/date";
-import CoverImage from "./cover-image";
+import CoverImage from "./cover-image2";
 import { Link } from "gatsby";
 
 export default function ProjectPreview({
   title,
   coverImage,
-  date,
   excerpt,
   hyperlink,
 }) {

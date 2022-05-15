@@ -13,7 +13,6 @@ import { HelmetDatoCms } from "gatsby-source-datocms";
 import { graphql } from "gatsby";
 
 export default function Post({ data: { site, post, morePosts } }) {
-  console.log(post)
   return (
     <div className="flex m-0">
       <Sidebar></Sidebar>
@@ -21,7 +20,7 @@ export default function Post({ data: { site, post, morePosts } }) {
         <HelmetDatoCms seo={post.seo} favicon={site.favicon} />
         <Navbar></Navbar>
         <Header />
-        <article>
+        <article className="mb-16">
           <PostHeader
             title={post.title}
             coverImage={post.coverImage}
@@ -30,6 +29,7 @@ export default function Post({ data: { site, post, morePosts } }) {
           />
           <PostBody content={post.content} />
         </article>
+
         {morePosts.nodes.length > 0 && <MoreStories header="More Stories" posts={morePosts.nodes} />}
 
         <Footer></Footer>
@@ -51,6 +51,10 @@ export const query = graphql`
       }
       title
       slug
+      date
+      coverImage {
+        gatsbyImageData(width: 1500)
+      }
       content {
         value
         links {
@@ -73,10 +77,6 @@ export const query = graphql`
             gatsbyImageData(width: 700)
           }
         }
-      }
-      date
-      coverImage {
-        gatsbyImageData(width: 1500)
       }
       author {
         name

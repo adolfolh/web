@@ -1,5 +1,4 @@
 import React from "react";
-import Container from "../components/container";
 import Footer from "../components/footer";
 import Sidebar from "../components/sidebar";
 import Layout from "../components/layout"
@@ -7,7 +6,6 @@ import Intro from "../components/intro";
 import MoreStories from "../components/more-stories";
 import MoreProjects from "../components/more-projects";
 import Contact from "../components/contact";
-import NavButtons from '../components/nav-buttons'
 import Navbar from "../components/navbar";
 
 import smile from "../assets/smile.svg"

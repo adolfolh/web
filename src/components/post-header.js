@@ -22,7 +22,7 @@ export default function PostHeader({ title, coverImage, date, author }) {
       <div className="mb-8 md:mb-16 -mx-5 sm:mx-0">
         <CoverImage title={title} fluid={coverImage?.gatsbyImageData} />
       </div>
-      <div className="px-5 max-w-2xl mx-auto">
+      <div className="md:px-0 px-5 max-w-2xl mx-auto">
         <div className="block md:hidden mb-6">
           {/** 
           <Link to="https://www.adolfolh.com">
