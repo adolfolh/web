@@ -13,7 +13,7 @@ export default function PostPreview({
   slug,
 }) {
   return (
-    <div className={'flex-grow w-screen md:w-1/3 preview'}>
+    <div className={'flex-grow w-full md:w-1/3 preview'}>
       <div>
         <CoverImage className="max-h-80 h-auto" slug={slug} title={title} fluid={coverImage.small} />
       </div>

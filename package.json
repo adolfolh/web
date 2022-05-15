@@ -41,7 +41,7 @@
   },
   "resolutions": {
     "trim": "0.0.3",
-    "browserslist": "4.16.5",
+    "browserslist": "^4.17.3",
     "ws": "7.4.6",
     "ansi-html": "0.0.7",
     "immer": "9.0.6",

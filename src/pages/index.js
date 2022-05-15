@@ -56,7 +56,7 @@ export default function Index({data: { allPosts, allProjects, site, blog }}) {
           projects={moreProjects} 
         />}
         <Link to="/projects">
-          <div className="button2 text-center md:w-full w-screen">
+          <div className="button2 text-center w-full">
             <h3 className="text-2xl"> See more projects</h3>
           </div>
         </Link>
@@ -83,7 +83,7 @@ export default function Index({data: { allPosts, allProjects, site, blog }}) {
           posts={morePosts} 
         />}
         <Link to="/blog">
-          <div className="button2 text-center md:w-full w-screen">
+          <div className="button2 text-center w-full">
             <h3 className="text-2xl"> See more articles</h3>
           </div>
         </Link>

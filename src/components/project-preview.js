@@ -12,7 +12,7 @@ export default function ProjectPreview({
   hyperlink,
 }) {
   return (
-    <div className={'grid grid-cols-1 md:w-full w-screen md:flex preview'}>
+    <div className={'grid grid-cols-1 w-full md:flex preview'}>
       <div >
         <CoverImage title={title} hyperlink={hyperlink} fluid={coverImage.small} />
       </div>
