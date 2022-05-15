@@ -6,11 +6,10 @@ import MoreStories from "../components/more-stories";
 import Footer from "../components/footer";
 import Sidebar from "../components/sidebar";
 import Layout from "../components/layout"
+import Navbar from '../components/navbar'
 
 import { HelmetDatoCms } from "gatsby-source-datocms";
 import { graphql } from "gatsby";
-
-import Navbar from '../components/navbar'
 
 export default function Index({ data: { allPosts, site, blog } }) {
   const heroPost = allPosts.nodes[0];

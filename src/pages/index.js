@@ -8,7 +8,7 @@ import MoreStories from "../components/more-stories";
 import MoreProjects from "../components/more-projects";
 import Contact from "../components/contact";
 import NavButtons from '../components/nav-buttons'
-import Navbar from "../components/Navbar";
+import Navbar from "../components/navbar";
 
 import smile from "../assets/smile.svg"
 import star from "../assets/star.svg"
