@@ -25,7 +25,7 @@ const Contact = () => {
             </div>
 
             <div class="grid col-span-1 md:flex mt-10">
-                <section class="p-10 pr-16 md:w-9/12 w-screen md:overflow-auto bg-offwhite2">
+                <section class="p-10 md:pr-16 md:w-9/12 w-screen md:overflow-auto bg-offwhite2">
                     <form 
                         name="Contact Form"
                         method="POST"
@@ -50,7 +50,7 @@ const Contact = () => {
                         <li>
                             <ReCAPTCHA 
                                 sitekey="6LfKu98fAAAAAFiQgf6MgyyokJNIbkhzk62-AKV4" 
-                                size="normal"
+                                size="compact"
                                 id="recaptcha-google"
                                 onChange={useCallback(() => {setDisableSubmit(false)}, [],)}
                             />

@@ -8,6 +8,7 @@ import MoreStories from "../components/more-stories";
 import MoreProjects from "../components/more-projects";
 import Contact from "../components/contact";
 import NavButtons from '../components/nav-buttons'
+import Navbar from "../components/Navbar";
 
 import smile from "../assets/smile.svg"
 import star from "../assets/star.svg"
@@ -26,9 +27,7 @@ export default function Index({data: { allPosts, allProjects, site, blog }}) {
       <Layout>
         <HelmetDatoCms seo={blog.seo} favicon={site.favicon} />
         {/* Index Content */}
-        <div className="md:hidden block top-0 w-full">
-          <NavButtons></NavButtons>
-        </div>
+        <Navbar></Navbar>
         <div className="xl:h-screen xl:items-center xl:flex items-baseline">
           <div>
             <Intro 

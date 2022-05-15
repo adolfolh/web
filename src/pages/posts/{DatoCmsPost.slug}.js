@@ -7,6 +7,7 @@ import PostHeader from "../../components/post-header";
 import Footer from "../../components/footer";
 import Sidebar from "../../components/sidebar";
 import Layout from "../../components/layout"
+import Navbar from "../../components/navbar"
 
 import { HelmetDatoCms } from "gatsby-source-datocms";
 import { graphql } from "gatsby";
@@ -18,6 +19,7 @@ export default function Post({ data: { site, post, morePosts } }) {
       <Sidebar></Sidebar>
       <Layout>
         <HelmetDatoCms seo={post.seo} favicon={site.favicon} />
+        <Navbar></Navbar>
         <Header />
         <article>
           <PostHeader

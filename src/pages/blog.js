@@ -10,7 +10,7 @@ import Layout from "../components/layout"
 import { HelmetDatoCms } from "gatsby-source-datocms";
 import { graphql } from "gatsby";
 
-import NavButtons from '../components/nav-buttons'
+import Navbar from '../components/navbar'
 
 export default function Index({ data: { allPosts, site, blog } }) {
   const heroPost = allPosts.nodes[0];
@@ -21,9 +21,7 @@ export default function Index({ data: { allPosts, site, blog } }) {
       <Sidebar></Sidebar>
       <Layout>
         <HelmetDatoCms seo={blog.seo} favicon={site.favicon} />
-        <div className="md:hidden block top-0 w-full">
-          <NavButtons></NavButtons>
-        </div>
+        <Navbar></Navbar>
         <Intro 
           title={'Blog.'} 
           description={'A blog for all things Data, AI, Web and any other thing that I find interesting or worth sharing :)'}
@@ -65,7 +63,7 @@ export const query = graphql`
         date
         coverImage {
           large: gatsbyImageData(width: 1500)
-          small: gatsbyImageData(width: 300, height: 250)
+          small: gatsbyImageData(height: 250)
         }
         author {
           name
