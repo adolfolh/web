@@ -32,19 +32,19 @@ export default function Sidebar() {
           <hr className="m-2 opacity-25"/>
             <Link to="/">
               <button className={'text-left navbutton'} disabled>
-                  <div class="icon text-center"><FontAwesomeIcon icon={faCalendar} /></div>
+                  <div className="icon text-center"><FontAwesomeIcon icon={faCalendar} /></div>
                   <p className="overflow-hidden whitespace-nowrap">Chronify (TBA)</p>
               </button>
             </Link>
             <Link to="/">
               <button className={'text-left navbutton'} disabled>
-                  <div class="icon text-center"><FontAwesomeIcon icon={faNewspaper} /></div>
+                  <div className="icon text-center"><FontAwesomeIcon icon={faNewspaper} /></div>
                   <p className="overflow-hidden whitespace-nowrap">Debatle (TBA)</p>
               </button>
             </Link>
             <Link to="/">
               <button className={'text-left navbutton'} disabled>
-                  <div class="icon text-center"><FontAwesomeIcon icon={faSadCry} /></div>
+                  <div className="icon text-center"><FontAwesomeIcon icon={faSadCry} /></div>
                   <p className="overflow-hidden whitespace-nowrap">Moodi (TBA)</p>
               </button>
             </Link>
@@ -54,19 +54,19 @@ export default function Sidebar() {
           <hr className="m-2 opacity-25"/>
             <Link to="/">
               <div className={'text-left navbutton'}>
-                  <div class="icon text-center"><FontAwesomeIcon icon={faMedium} /></div>
+                  <div className="icon text-center"><FontAwesomeIcon icon={faMedium} /></div>
                   <p className="overflow-hidden whitespace-nowrap">Medium</p>
               </div>
             </Link>
             <Link to="/">
               <div className={'text-left navbutton'}>
-                  <div class="icon text-center"><FontAwesomeIcon icon={faGithub} /></div>
+                  <div className="icon text-center"><FontAwesomeIcon icon={faGithub} /></div>
                   <p className="overflow-hidden whitespace-nowrap">Github</p>
               </div>
             </Link>
             <Link to="/">
               <div className={'text-left navbutton'}>
-                <div class="icon text-center"><FontAwesomeIcon icon={faLinkedin} /></div>
+                <div className="icon text-center"><FontAwesomeIcon icon={faLinkedin} /></div>
                 <p className="overflow-hidden whitespace-nowrap">LinkedIn</p>
               </div>
             </Link>
@@ -77,7 +77,7 @@ export default function Sidebar() {
           <hr className="m-2 opacity-25"/>
           <Link to="/">
             <div className={'text-left navbutton'}>
-              <div class="icon text-center"><FontAwesomeIcon icon={faShareFromSquare} /></div>
+              <div className="icon text-center"><FontAwesomeIcon icon={faShareFromSquare} /></div>
               <p className="overflow-hidden whitespace-nowrap">Share</p>
             </div>
           </Link>

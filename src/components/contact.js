@@ -24,8 +24,8 @@ const Contact = () => {
                 </div>
             </div>
 
-            <div class="grid col-span-1 md:flex mt-10">
-                <section class="p-10 md:pr-16 md:w-9/12 w-full md:overflow-auto bg-offwhite2">
+            <div className="grid col-span-1 md:flex mt-10">
+                <section className="p-10 md:pr-16 md:w-9/12 w-full md:overflow-auto bg-offwhite2">
                     <form 
                         name="Contact Form"
                         method="POST"
@@ -34,13 +34,13 @@ const Contact = () => {
                         action="/thank-you"
                     >
                     <input type="hidden" name="form-name" value="Contact Form" />
-                    <div class="grid col-span-1">
-                        <div class="pb-3">
+                    <div className="grid col-span-1">
+                        <div className="pb-3">
                             <label className="font-bold uppercase font-accent" htmlFor="email">Email<span className="text-red-600">*</span></label>
                         </div>
                         <input className="p-2" type="email" name="email" id="email-address" placeholder="name@email.com" required/>
 
-                        <div class="pt-10 pb-3">
+                        <div className="pt-10 pb-3">
                             <label className="font-bold uppercase font-accent" htmlFor="message">Message</label>
                         </div>
                         <textarea className="p-2 mb-8" name="message" id="message" rows="5" placeholder="Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla nullam quis risus."></textarea>
@@ -69,7 +69,7 @@ const Contact = () => {
 
                 {/** SOCIALS AND MORE DETAILS */}
                 <section className="bg-offwhite3 p-10 w-full md:w-3/12">
-                    <ul class="contact">
+                    <ul className="contact">
                         <li className="mb-10">
                             <h3>Location</h3>
                             <span>London,<br />
@@ -83,10 +83,10 @@ const Contact = () => {
                         <li className="mb-10">
                             <h3>Social</h3>
                             <ul className="flex">
-                                <li><a className="pr-2 h-2 w-2" target="_blank" rel="noreferrer" href="https://www.twitter.com/adolfoolh"><span class="label"><FontAwesomeIcon icon={faTwitter} /></span></a></li>
-                                <li><a className="pr-2 h-2 w-2" target="_blank" rel="noreferrer" href="https://www.github.com/adolfolh"><span class="label"><FontAwesomeIcon icon={faGithub} /></span></a></li>
-                                <li><a className="pr-2 h-2 w-2" target="_blank" rel="noreferrer" href="https://www.instagram.com/adolfo.lh" ><span class="label"><FontAwesomeIcon icon={faInstagram} /></span></a></li>
-                                <li><a className="pr-2 h-2 w-2" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/adolfo-l%C3%B3pez-herrera-0042a61b5"><span class="label"><FontAwesomeIcon icon={faLinkedin} /></span></a></li>
+                                <li><a className="pr-2 h-2 w-2" target="_blank" rel="noreferrer" href="https://www.twitter.com/adolfoolh"><span className="label"><FontAwesomeIcon icon={faTwitter} /></span></a></li>
+                                <li><a className="pr-2 h-2 w-2" target="_blank" rel="noreferrer" href="https://www.github.com/adolfolh"><span className="label"><FontAwesomeIcon icon={faGithub} /></span></a></li>
+                                <li><a className="pr-2 h-2 w-2" target="_blank" rel="noreferrer" href="https://www.instagram.com/adolfo.lh" ><span className="label"><FontAwesomeIcon icon={faInstagram} /></span></a></li>
+                                <li><a className="pr-2 h-2 w-2" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/adolfo-l%C3%B3pez-herrera-0042a61b5"><span className="label"><FontAwesomeIcon icon={faLinkedin} /></span></a></li>
                             </ul>
                         </li>
                     </ul>

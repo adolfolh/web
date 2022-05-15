@@ -13,7 +13,7 @@ export default function HeroPost({
   slug,
 }) {
   return (
-    <section className="">
+    <section className="overflow-hidden">
       <div className="">
         <CoverImage title={title} fluid={coverImage.large} slug={slug} />
       </div>
