@@ -15,7 +15,7 @@ import { Link } from "gatsby";
 import { HelmetDatoCms } from "gatsby-source-datocms";
 import { graphql } from "gatsby";
 
-export default function Index({data: { allPosts, allProjects, site, blog }}) {
+export default function Index({data: { allPosts, allProjects, site, blog, resume }}) {
   const morePosts = allPosts.nodes.slice(0);
   const moreProjects = allProjects.nodes.slice(0);
 
@@ -40,7 +40,7 @@ export default function Index({data: { allPosts, allProjects, site, blog }}) {
                 science and AI.
               </p>
               <div className="mt-8">
-                <a href="" className="pill">
+                <a href={resume} className="pill">
                   Download resume
                 </a>
               </div>
@@ -139,6 +139,11 @@ export const query = graphql`
           large: gatsbyImageData(width: 1500)
           small: gatsbyImageData(width: 700, height: 700)
         }
+      }
+    }
+    resume : datoCmsResume {
+      file {
+        url
       }
     }
   }
