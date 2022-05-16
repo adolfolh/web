@@ -25,7 +25,7 @@ const Contact = () => {
             </div>
 
             <div className="grid col-span-1 md:flex mt-10">
-                <section className="p-10 md:pr-16 md:w-9/12 w-full md:overflow-auto bg-offwhite2">
+                <section className="p-10 md:pr-16 md:w-9/12 w-full md:overflow-auto bg-offwhite3">
                     <form 
                         name="Contact Form"
                         method="POST"
@@ -68,7 +68,7 @@ const Contact = () => {
                 </section>
 
                 {/** SOCIALS AND MORE DETAILS */}
-                <section className="bg-offwhite3 p-10 w-full md:w-3/12">
+                <section className="bg-offwhite2 p-10 w-full md:w-3/12">
                     <ul className="contact">
                         <li className="mb-10">
                             <h3>Location</h3>

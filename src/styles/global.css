@@ -89,7 +89,7 @@ body, input, select, textarea, p {
 
 .pill2 {
   border-width: 1px;
-  @apply border-black py-1 px-2 rounded-full w-max my-3 font-accent text-xs
+  @apply border-black py-1 px-2 rounded-full w-max my-3 font-accent text-xs opacity-50
 }
 
 button[disabled] {

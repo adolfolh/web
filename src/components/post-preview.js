@@ -1,5 +1,4 @@
 import React from "react";
-import Avatar from "../components/avatar";
 import Date from "../components/date";
 import CoverImage from "./cover-image";
 import { Link } from "gatsby";
@@ -9,8 +8,8 @@ export default function PostPreview({
   coverImage,
   date,
   excerpt,
-  author,
   slug,
+  category,
 }) {
   return (
     <div className={'flex-grow w-full md:w-1/3 preview'}>
@@ -22,19 +21,18 @@ export default function PostPreview({
           <h2 className="text-3xl mb-3 leading-snug hover:underline">
             {title}
           </h2>
-          <div className="uppercase text-sm mb-4 opacity-50">
-            <Date dateString={date} />
+          <div className="uppercase text-sm mb-4 opacity-50 font-accent">
+            <Date dateString={date} /> • 5,000 views
           </div>
-          <p className="text-base leading-relaxed mb-4 font-semibold">{excerpt}</p>
+          <p className="text-base leading-relaxed mb-4">{excerpt}</p>
 
           {/** 
           <Link to="https://www.adolfolh.com">
             <Avatar name={author?.name} picture={author?.picture} />
           </Link>
           */}
-
           <div className="pill2">
-              5,000 views
+            {category.name}
           </div> 
         </div>
       </Link>

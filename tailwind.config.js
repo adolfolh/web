@@ -5,8 +5,8 @@ module.exports = {
   theme: {
     fontFamily: {
       'display': ['"VC Henrietta Trial", sans'],
-      'body': ['Violet Sans,"Helvetica Neue", Arial'],
-      'accent' : ['neue metana, Violet Sans,"Helvetica Neue", Arial'],
+      'body': ['"Chivo","Helvetica Neue", Arial'],
+      'accent' : ['"Chivo","Helvetica Neue", Arial'],
     },
     extend: {
       colors: {

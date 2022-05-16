@@ -22,10 +22,10 @@ export default function PostPreviewInline({
           <h2 className="text-3xl mb-3 leading-snug hover:underline">
             {title}
           </h2>
-          <div className="uppercase text-sm mb-4 opacity-50">
+          <div className="uppercase text-sm mb-4 opacity-50 font-accent">
             <Date dateString={date} />
           </div>
-          <p className="text-base leading-relaxed mb-4 font-semibold">{excerpt}</p>
+          <p className="text-base leading-relaxed mb-4">{excerpt}</p>
 
           {/** 
           <Link to="https://www.adolfolh.com">

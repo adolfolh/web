@@ -20,7 +20,7 @@ export default function HeroProject({
             {title}
           </h3>
 
-          <p className="text-lg leading-relaxed mb-4 font-semibold">{excerpt}</p>
+          <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
           {/** 
           <Link to="https://www.adolfolh.com">
             <Avatar name={author?.name} picture={author?.picture} />

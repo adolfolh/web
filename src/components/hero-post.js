@@ -9,7 +9,7 @@ export default function HeroPost({
   coverImage,
   date,
   excerpt,
-  author,
+  category,
   slug,
 }) {
   return (
@@ -18,15 +18,15 @@ export default function HeroPost({
         <CoverImage title={title} fluid={coverImage.large} slug={slug} />
       </div>
       <Link to={`/posts/${slug}`}>
-        <div className="pt-8 mb-5 px-10 pb-10 md:mb-8 bg-offwhite2 transition ease-in-out delay-150 hover:bg-black hover:text-white">
+        <div className="pt-8 mb-5 px-10 pb-10 md:mb-8 bg-offwhite2 transition ease-in-out delay-150 hover:bg-black hover:text-white preview">
           <h3 className="mb-4 text-5xl lg:text-7xl leading-tight hover:underline">
             {title}
           </h3>
-          <div className="uppercase text-sm mb-4 opacity-50">
-            <Date dateString={date} />
+          <div className="uppercase text-sm mb-4 opacity-50 font-accent">
+            <Date dateString={date} /> • 5,000 views
           </div>
 
-          <p className="text-lg leading-relaxed mb-4 font-semibold">{excerpt}</p>
+          <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
           {/** 
           <Link to="https://www.adolfolh.com">
             <Avatar name={author?.name} picture={author?.picture} />
@@ -34,7 +34,7 @@ export default function HeroPost({
           */}
 
           <div className="pill2">
-              5,000 views
+              {category.name}
           </div> 
         </div>
       </Link>

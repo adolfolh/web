@@ -28,19 +28,21 @@ export default function Index({data: { allPosts, allProjects, site, index, resum
         <Navbar></Navbar>
         <div className="xl:h-screen xl:items-center xl:flex items-baseline">
           <div>
-            <Intro 
-              title="Data Scientist & Developer."
-            />
+            <section className="px-10 flex-col md:flex-row flex items-center md:justify-between mt-12 mb-16 md:mt-36 md:mb-24">
+              <h1 className="text-6xl md:text-9xl font-bold tracking-tighter leading-tight md:pr-8">
+                Data Scientist & Developer
+              </h1>
+            </section>
             <div className="px-10 pt-0 mb-16 md:py-10 md:px-32">
               <p className="text-justify leading-loose text-sm md:text-xl">
-                I’m Adolfo López Herrera and I'm currently working on my undergraduate dissertation on machine learning, 
+                I am Adolfo López Herrera and I'm currently working on my undergraduate dissertation on machine learning, 
                 but I am also looking for my next job/project as a data scientist. 
                 I was born in Spain and I study in the UK, working on my bachelor’s degree 
                 in computer science. My biggest interests lay in the subject of data 
                 science and AI.
               </p>
               <div className="mt-8">
-                <a href={resume.file.url} className="pill">
+                <a href={resume.file.url} className="pill text-sm">
                   Download resume
                 </a>
               </div>
@@ -115,6 +117,9 @@ export const query = graphql`
         coverImage {
           large: gatsbyImageData(width: 1500)
           small: gatsbyImageData(width: 700, height: 700)
+        }
+        category {
+          name
         }
         author {
           name

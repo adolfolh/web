@@ -19,7 +19,7 @@ export default function PostHeader({ title, coverImage, date, author }) {
               5,000 views
           </div> 
       </div>
-      <div className="mb-8 md:mb-16 -mx-5 sm:mx-0">
+      <div className="mb-8 md:mb-16 overflow-hidden">
         <CoverImage title={title} fluid={coverImage?.gatsbyImageData} />
       </div>
       <div className="md:px-0 px-5 max-w-2xl mx-auto">
@@ -34,7 +34,7 @@ export default function PostHeader({ title, coverImage, date, author }) {
               5,000 views
           </div>         
         </div>
-        <div className="opacity-50 uppercase md:px-0 mb-6 text-lg">
+        <div className="opacity-50 uppercase md:px-0 mb-6 text-lg font-accent">
           <Date dateString={date} />
         </div>
       </div>

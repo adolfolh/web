@@ -34,6 +34,7 @@ export default function Blog({ data: { allPosts, site, blog } }) {
             author={heroPost.author}
             slug={heroPost.slug}
             excerpt={heroPost.excerpt}
+            category={heroPost.category}
           />
         )}
         {morePosts.length > 0 && <MoreStories header="More Stories" posts={morePosts} />}
@@ -64,6 +65,9 @@ export const query = graphql`
         coverImage {
           large: gatsbyImageData(width: 1500)
           small: gatsbyImageData(width: 700)
+        }
+        category {
+          name
         }
         author {
           name

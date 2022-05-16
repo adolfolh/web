@@ -104,6 +104,9 @@ export const query = graphql`
         coverImage {
           small: gatsbyImageData(width: 760, height: 760)
         }
+        category {
+          name
+        }
         author {
           name
           picture {
