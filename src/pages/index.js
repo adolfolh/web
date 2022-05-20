@@ -9,9 +9,11 @@ import Contact from "../components/contact";
 import Navbar from "../components/navbar";
 import Box from "../components/box"
 
-import grid1 from "../assets/grid-01.svg"
+import grid1 from "../assets/grid-01.png"
+import grid2 from "../assets/grid-02.png"
+import grid3 from "../assets/grid-03.png"
+
 import dsd from "../assets/dsd.png"
-import data from "../assets/data.png"
 
 import smile from "../assets/smile.png"
 import star from "../assets/star.png"
@@ -57,7 +59,7 @@ export default function Index({data: { allPosts, allProjects, site, index, resum
                 <div id="item-0">
                   <Box type="square" bg="bg-white">
                     <div className="in-box">
-                      <div className="hvalign h-full w-full overflow-hidden">
+                      <div className="hvalign w-full overflow-hidden">
                         <img 
                           src={dsd}
                         />
@@ -85,7 +87,7 @@ export default function Index({data: { allPosts, allProjects, site, index, resum
                     <div className="in-box">
                       <div className="hvalign w-full">
                         <img 
-                          src={data}
+                          src={grid1}
                         />
                       </div>
                     </div>
@@ -140,7 +142,7 @@ export default function Index({data: { allPosts, allProjects, site, index, resum
                     <div className="in-box">
                       <div className="hvalign w-full">
                         <img
-                          src={star}
+                          src={grid2}
                         />
                       </div>
                     </div>
@@ -151,7 +153,7 @@ export default function Index({data: { allPosts, allProjects, site, index, resum
                     <div className="in-box">
                       <div className="hvalign w-full">
                         <img 
-                          src={smile}
+                          src={grid3}
                         />
                       </div>
                     </div>
