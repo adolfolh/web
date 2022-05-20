@@ -168,18 +168,29 @@ button[disabled] .navbutton{
   @apply float-left w-16
 }
 
-.layout {
-  border-width: 0.1px;
-  @apply border-black w-full
-}
 
 .in-container {
   /*@apply rounded-xl*/
 }
 
 .black-border {
-  border-width: 0.1px;
-  @apply border-black
+  @apply border-0
+}
+
+.layout {
+  @apply border-0
+}
+
+@media (min-width: 900px) {
+  .black-border {
+    border-width: 0.1px;
+    @apply border-black
+  }
+
+  .layout {
+    border-width: 0.1px;
+    @apply border-black w-full
+  }
 }
 
 .square{

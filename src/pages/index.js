@@ -235,7 +235,7 @@ export const query = graphql`
         hyperlink
         coverImage {
           large: gatsbyImageData(width: 1500)
-          small: gatsbyImageData(width: 700, height: 700)
+          small: gatsbyImageData(width: 900, height: 900)
         }
         category {
           name
