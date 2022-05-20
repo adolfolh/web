@@ -13,13 +13,13 @@ export default function HeroPost({
   slug,
 }) {
   return (
-      <section className="overflow-hidden">
+      <section className="overflow-hidden preview">
         <div className="">
           <CoverImage title={title} fluid={coverImage.large} slug={slug} />
         </div>
         <Box bg="bg-white">
           <Link to={`/posts/${slug}`}>
-            <div className="pt-8 px-10 pb-10 bg-offwhite2 transition ease-in-out delay-150 hover:bg-black hover:text-white preview">
+            <div className="pt-8 px-10 pb-10 bg-offwhite2 transition ease-in-out delay-150 hover:bg-black hover:text-white cardbg">
               <h3 className="mb-4 text-5xl lg:text-7xl leading-tight hover:underline">
                 {title}
               </h3>

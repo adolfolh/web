@@ -16,7 +16,8 @@ export default function Portfolio({ data: { allProjects, site, portfolio } }) {
   const moreProjects = allProjects.nodes.slice(1);
 
   return (
-    <div>
+    <div className="relative">
+      <div className="paperOverlay"></div>
       <div className="flex">
         <Sidebar></Sidebar>
         <Layout>

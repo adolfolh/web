@@ -6,7 +6,8 @@ import bear from "../assets/bear.svg"
 import { Link } from "gatsby";
 
 const ThankYouPage = () => (
-  <div>
+  <div className="relative">
+    <div className="paperOverlay"></div>
     <div 
         className="px-10 flex-col flex items-center mt-16 mb-8"
     > 

@@ -10,7 +10,12 @@ import Navbar from "../components/navbar";
 import Box from "../components/box"
 
 import grid1 from "../assets/grid-01.svg"
-import dsd from "../assets/dsd.svg"
+import dsd from "../assets/dsd.png"
+import data from "../assets/data.png"
+
+import smile from "../assets/smile.png"
+import star from "../assets/star.png"
+
 
 import { Link } from "gatsby";
 import { HelmetDatoCms } from "gatsby-source-datocms";
@@ -22,7 +27,8 @@ export default function Index({data: { allPosts, allProjects, site, index, resum
   const moreProjects = allProjects.nodes.slice(0);
 
   return (
-    <div>
+    <div className="relative">
+      <div className="paperOverlay"></div>
       <div className="flex">
         <Sidebar></Sidebar>
         <Layout>
@@ -51,7 +57,7 @@ export default function Index({data: { allPosts, allProjects, site, index, resum
                 <div id="item-0">
                   <Box type="square" bg="bg-white">
                     <div className="in-box">
-                      <div className="hvalign w-full p-20">
+                      <div className="hvalign h-full w-full overflow-hidden">
                         <img 
                           src={dsd}
                         />
@@ -79,7 +85,7 @@ export default function Index({data: { allPosts, allProjects, site, index, resum
                     <div className="in-box">
                       <div className="hvalign w-full">
                         <img 
-                          src={grid1}
+                          src={data}
                         />
                       </div>
                     </div>
@@ -134,7 +140,7 @@ export default function Index({data: { allPosts, allProjects, site, index, resum
                     <div className="in-box">
                       <div className="hvalign w-full">
                         <img
-                          src={grid1}
+                          src={star}
                         />
                       </div>
                     </div>
@@ -145,7 +151,7 @@ export default function Index({data: { allPosts, allProjects, site, index, resum
                     <div className="in-box">
                       <div className="hvalign w-full">
                         <img 
-                          src={grid1}
+                          src={smile}
                         />
                       </div>
                     </div>

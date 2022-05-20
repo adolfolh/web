@@ -15,7 +15,8 @@ import Box from "../../components/box"
 
 export default function Post({ data: { site, post, morePosts } }) {
   return (
-    <div>
+    <div className="relative">
+      <div className="paperOverlay"></div>
       <div className="flex m-0">
         <Sidebar></Sidebar>
         <Layout>

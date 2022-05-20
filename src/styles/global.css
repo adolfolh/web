@@ -45,10 +45,6 @@ body, input, select, textarea, p {
   @apply font-body
 }
 
-img {
-  @apply max-w-none
-}
-
 .cover-img {
   filter: grayscale(1);
   @apply transition ease-in-out delay-150
@@ -362,4 +358,23 @@ button[disabled] .navbutton{
 #item-9 {
   grid-area: label9;
   
+}
+
+.paperOverlay {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.4;
+  background-repeat: repeat;
+  background-image: url("../assets/Photocopy\ 3.jpg");
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.sidebar {
+  z-index: 200;
 }

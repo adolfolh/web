@@ -16,7 +16,8 @@ export default function Blog({ data: { allPosts, site, blog } }) {
   const morePosts = allPosts.nodes.slice(1);
 
   return (
-    <div>
+    <div className="relative">
+      <div className="paperOverlay"></div>
       <div className="flex">
         <Sidebar></Sidebar>
         <Layout>
