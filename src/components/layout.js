@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function Layout({ children }) {
-  return <div className="layout-hover ml-0 md:ml-16">{ children }</div>
+  return <div className="ml-0 md:ml-24 md:m-8 layout">{ children }</div>
 }

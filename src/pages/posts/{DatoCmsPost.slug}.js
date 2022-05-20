@@ -11,29 +11,33 @@ import Navbar from "../../components/navbar"
 
 import { HelmetDatoCms } from "gatsby-source-datocms";
 import { graphql } from "gatsby";
+import Box from "../../components/box"
 
 export default function Post({ data: { site, post, morePosts } }) {
   return (
-    <div className="flex m-0">
-      <Sidebar></Sidebar>
-      <Layout>
-        <HelmetDatoCms seo={post.seo} favicon={site.favicon} />
-        <Navbar></Navbar>
-        <Header />
-        <article className="mb-16">
-          <PostHeader
-            title={post.title}
-            coverImage={post.coverImage}
-            date={post.date}
-            author={post.author}
-          />
-          <PostBody content={post.content} />
-        </article>
+    <div>
+      <div className="flex m-0">
+        <Sidebar></Sidebar>
+        <Layout>
+          <HelmetDatoCms seo={post.seo} favicon={site.favicon} />
+          <Navbar></Navbar>
+          <Box>
+            <article className="my-16">
+              <PostHeader
+                title={post.title}
+                coverImage={post.coverImage}
+                date={post.date}
+                author={post.author}
+              />
+              <PostBody content={post.content} />
+            </article>
+          </Box>
 
-        {morePosts.nodes.length > 0 && <MoreStories header="More Stories" posts={morePosts.nodes} />}
+          {morePosts.nodes.length > 0 && <MoreStories posts={morePosts.nodes} />}
 
-        <Footer></Footer>
-      </Layout>
+        </Layout>
+      </div>
+      <Footer></Footer>
     </div>
   );
 }
@@ -74,7 +78,7 @@ export const query = graphql`
           __typename
           id: originalId
           image {
-            gatsbyImageData(width: 700)
+            gatsbyImageData(width: 900)
           }
         }
       }

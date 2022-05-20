@@ -16,30 +16,34 @@ export default function Blog({ data: { allPosts, site, blog } }) {
   const morePosts = allPosts.nodes.slice(1);
 
   return (
-    <div className="flex">
-      <Sidebar></Sidebar>
-      <Layout>
-        <HelmetDatoCms seo={blog.seo} favicon={site.favicon} />
-        <Search data={allPosts} searchType='Blog'></Search>
-        <Navbar></Navbar>
-        <Intro 
-          title={'Blog.'} 
-          /*description={'A blog for all things Data, AI, Web and any other thing that I find interesting or worth sharing :)'}*/
-        />
-        {heroPost && (
-          <HeroPost
-            title={heroPost.title}
-            coverImage={heroPost.coverImage}
-            date={heroPost.date}
-            author={heroPost.author}
-            slug={heroPost.slug}
-            excerpt={heroPost.excerpt}
-            category={heroPost.category}
+    <div>
+      <div className="flex">
+        <Sidebar></Sidebar>
+        <Layout>
+          <HelmetDatoCms seo={blog.seo} favicon={site.favicon} />
+          <Navbar></Navbar>
+          <Intro 
+            title={'Blog.'} 
+            /*description={'A blog for all things Data, AI, Web and any other thing that I find interesting or worth sharing :)'}*/
           />
-        )}
-        {morePosts.length > 0 && <MoreStories header="More Stories" posts={morePosts} />}
-        <Footer></Footer>
-      </Layout>
+
+          <Search data={allPosts} searchType='Blog'></Search>
+
+          {heroPost && (
+            <HeroPost
+              title={heroPost.title}
+              coverImage={heroPost.coverImage}
+              date={heroPost.date}
+              author={heroPost.author}
+              slug={heroPost.slug}
+              excerpt={heroPost.excerpt}
+              category={heroPost.category}
+            />
+          )}
+          {morePosts.length > 0 && <MoreStories header="" posts={morePosts} />}
+        </Layout>
+      </div>
+      <Footer></Footer>
     </div>
   );
 }
@@ -64,7 +68,7 @@ export const query = graphql`
         date
         coverImage {
           large: gatsbyImageData(width: 1500)
-          small: gatsbyImageData(width: 700)
+          small: gatsbyImageData(width: 900, height: 900)
         }
         category {
           name

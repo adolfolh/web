@@ -2,6 +2,7 @@ import React from "react";
 import Date from "../components/date";
 import CoverImage from "./cover-image";
 import { Link } from "gatsby";
+import Box from "./box";
 
 export default function PostPreview({
   title,
@@ -17,7 +18,7 @@ export default function PostPreview({
         <CoverImage className="max-h-80 h-auto" slug={slug} title={title} fluid={coverImage.small} />
       </div>
       <Link style={{textDecoration: 'none'}} to={`/posts/${slug}`}>
-        <div className={'text-black p-10 h-full cardbg'}>
+        <div className={'text-black p-10 h-full cardbg black-border bg-offwhite2'}>
           <h2 className="text-3xl mb-3 leading-snug hover:underline">
             {title}
           </h2>

@@ -16,31 +16,34 @@ export default function Portfolio({ data: { allProjects, site, portfolio } }) {
   const moreProjects = allProjects.nodes.slice(1);
 
   return (
-    <div className="flex">
-      <Sidebar></Sidebar>
-      <Layout>
-        <HelmetDatoCms seo={portfolio.seo} favicon={site.favicon} />
-        <Search data={allProjects} searchType='Portfolio'></Search>
-        <Navbar></Navbar>
-        <Intro 
-          title={'Portfolio.'} 
-          /*description={'A portfolio featuring my projects, websites and research.'}*/
-        />
-
-        {heroProject && (
-          <HeroProject
-            title={heroProject.title}
-            coverImage={heroProject.coverImage}
-            hyperlink={heroProject.hyperlink}
-            excerpt={heroProject.excerpt}
-            category={heroProject.category.name}
+    <div>
+      <div className="flex">
+        <Sidebar></Sidebar>
+        <Layout>
+          <HelmetDatoCms seo={portfolio.seo} favicon={site.favicon} />
+          <Navbar></Navbar>
+          <Intro 
+            title={'Portfolio.'} 
+            /*description={'A portfolio featuring my projects, websites and research.'}*/
           />
-        )}
-        {moreProjects.length > 0 && <MoreProjects header="More Projects" projects={moreProjects} 
-        />}
 
-        <Footer></Footer>
-      </Layout>
+          <Search data={allProjects} searchType='Portfolio'></Search>
+
+          {heroProject && (
+            <HeroProject
+              title={heroProject.title}
+              coverImage={heroProject.coverImage}
+              hyperlink={heroProject.hyperlink}
+              excerpt={heroProject.excerpt}
+              category={heroProject.category.name}
+            />
+          )}
+          {moreProjects.length > 0 && <MoreProjects header="" projects={moreProjects} 
+          />}
+
+        </Layout>
+      </div>
+      <Footer></Footer>
     </div>
   );
 }
@@ -67,7 +70,7 @@ export const query = graphql`
         }
         coverImage {
           large: gatsbyImageData(width: 1500)
-          small: gatsbyImageData(width:600, height: 500)
+          small: gatsbyImageData(width: 900, height: 900)
         }
       }
     }
