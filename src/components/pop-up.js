@@ -6,13 +6,10 @@ import { faFacebook } from "@fortawesome/free-brands-svg-icons"
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 export default class PopUp extends Component {
   handleClick = () => {
     this.props.toggle();
   };
-
-  
 render() {
   return (
     <div className="cloud-border">

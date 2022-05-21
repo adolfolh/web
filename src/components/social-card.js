@@ -14,11 +14,17 @@ export default class SocialCard extends React.Component {
    });
   };
 
+  componentDidMount() {
+    this.state.seen ? document.body.style.overflow = "hidden" : document.body.style.overflow = "unset";
+  }
+  componentDidUpdate() {
+    this.state.seen ? document.body.style.overflow = "hidden" : document.body.style.overflow = "unset";
+  }
 render() {
   return (
     <div className="bottom-0">
         <div className="hidden">
-            {this.state.seen ? document.body.style.overflow = "hidden" : document.body.style.overflow = "unset"}
+        {this.state.seen ? document.body.style.overflow = "hidden" : document.body.style.overflow = "unset"}
         </div>
         <div onClick={this.togglePop}>
             <button>
