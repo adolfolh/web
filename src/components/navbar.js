@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Navbar() {
   return (
-    <div className="md:hidden flex bottom-0 w-full fixed justify-around h-16 bg-black z-50">
+    <div className="md:hidden flex bottom-0 w-full fixed justify-around h-16 bg-black sidebar">
         <Link to="/">
             <div>
                 <div className="p-5 text-white active:text-azure text-xl"><FontAwesomeIcon icon={faCompass} /></div>

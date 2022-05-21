@@ -367,7 +367,7 @@ button[disabled] .navbutton{
   bottom: 0;
   left: 0;
   right: 0;
-  opacity: 0.4;
+  opacity: 0.25;
   background-repeat: repeat;
   background-image: url("../assets/Photocopy\ 3.jpg");
   mix-blend-mode: screen;
@@ -377,4 +377,26 @@ button[disabled] .navbutton{
 
 .sidebar {
   z-index: 200;
+}
+
+.popup {
+  padding-left: 12rem;
+  padding-right: 12rem;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  @apply border-black border-2 bg-black
+}
+
+.popup h1 {
+  @apply text-3xl text-white
+}
+
+.popup h2 {
+  @apply text-xl text-white
 }

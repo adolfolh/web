@@ -2,6 +2,9 @@ import React from "react";
 import { Link } from "gatsby";
 import NavButtons from './nav-buttons'
 import Logo from "../assets/eye.svg"
+import Popup from 'reactjs-popup';
+
+import SocialCard from "./social-card";
 
 import { faShareFromSquare } from "@fortawesome/free-regular-svg-icons"
 
@@ -11,7 +14,7 @@ export default function Sidebar() {
   return (
     <div className="bg-black overflow-hidden hidden md:block md:w-16 md:fixed md:h-full md:overflow-auto sidebar">
       {/*<div className="flex flex-col justify-around h-screen">*/}
-        <Link to="/" className="mt-4 mb-8 flex items-center">
+        <Link to="/" className="mt-8 mb-8 flex items-center">
           <img src={Logo} alt="Logo" className="w-16 p-2 float-left"></img>
           <h1 className="font-semibold overflow-hidden text-white text-base whitespace-nowrap w-full">Adolfo López Herrera</h1>
         </Link>
@@ -65,16 +68,11 @@ export default function Sidebar() {
             </Link>
           </div>
           */}
-        
-        <div className="w-full absolute bottom-0">
+          <div className="w-full absolute bottom-0">
           <hr className="m-2 opacity-25"/>
-          <Link to="/">
-            <div className={'text-left navbutton'}>
-              <div className="icon text-center"><FontAwesomeIcon icon={faShareFromSquare} /></div>
-              <p className="overflow-hidden whitespace-nowrap">Share</p>
-            </div>
-          </Link>
+          <SocialCard></SocialCard>  
         </div>
+
       {/*</div>*/}
     </div>
   )
