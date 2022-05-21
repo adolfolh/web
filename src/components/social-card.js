@@ -23,9 +23,6 @@ export default class SocialCard extends React.Component {
 render() {
   return (
     <div className="bottom-0">
-        <div className="hidden">
-        {this.state.seen ? document.body.style.overflow = "hidden" : document.body.style.overflow = "unset"}
-        </div>
         <div onClick={this.togglePop}>
             <button>
                 <div className={'text-left navbutton'}>
