@@ -5,6 +5,12 @@ module.exports = {
     title: "ADOLFO L.H.",
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GA_TRACKING_ID
+      }
+    },
     "gatsby-plugin-postcss",
     {
       resolve: "gatsby-source-datocms",
@@ -18,10 +24,5 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-  ],
-  resolve: `gatsby-plugin-google-analytics`,
-  options: {
-    // The property ID; the tracking code won't be generated without it
-    trackingId: process.env.GA_TRACKING_ID,
-  },
+  ]
 };
