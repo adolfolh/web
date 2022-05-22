@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "gatsby";
 import NavButtons from './nav-buttons'
 import Logo from "../assets/eye.svg"
-import Popup from 'reactjs-popup';
 
 import SocialCard from "./social-card";
 

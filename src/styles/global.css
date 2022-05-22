@@ -376,7 +376,7 @@ button[disabled] .navbutton{
 }
 
 .sidebar {
-  z-index: 200;
+  z-index: 500;
 }
 
 .popup {

@@ -2,7 +2,7 @@ require("dotenv").config();
 
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Blog Demo",
+    title: "ADOLFO L.H.",
   },
   plugins: [
     "gatsby-plugin-postcss",
@@ -19,4 +19,9 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
   ],
+  resolve: `gatsby-plugin-google-analytics`,
+  options: {
+    // The property ID; the tracking code won't be generated without it
+    trackingId: process.env.GA_TRACKING_ID,
+  },
 };
