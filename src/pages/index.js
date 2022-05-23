@@ -18,7 +18,7 @@ import { GatsbyImage } from "gatsby-plugin-image";
 export default function Index({data: { allPosts, allProjects, site, index, resume }}) {
   const morePosts = allPosts.nodes.slice(0);
   const moreProjects = allProjects.nodes.slice(0);
-  console.log(index)
+
   return (
     <div className="relative">
       <div className="paperOverlay"></div>
@@ -32,7 +32,7 @@ export default function Index({data: { allPosts, allProjects, site, index, resum
           <div>
             <Box bg="bg-white">
               <div>
-                <section className="px-10 pt-12 pb-16 md:py-32 border-bottom">
+                <section className="md:px-32 p-10 pt-12 pb-16 md:py-32 border-bottom">
                   <h1 className="text-6xl md:text-9xl font-bold tracking-tighter leading-tight">
                     Adolfo López Herrera
                   </h1>
@@ -60,53 +60,56 @@ export default function Index({data: { allPosts, allProjects, site, index, resum
                   </Box>
                 </div>
                 <div id="item-1" className="border-left border-right">
-                  <Box type="two-thirds"  bg="bg-white">
+                  <Box type="square"  bg="bg-white">
                     <div className="in-box">
-                      <div className="valign px-10">
+                      <div className="valign px-32">
                         <p className="text-justify leading-loose text-sm md:text-xl">
-                          {index.description}
+                          content
                         </p>
+                      </div>
+                    </div>
+                  </Box>
+                </div>
+                <div id="item-2">
+                  <Box type="square overflow-hidden"  bg="bg-offwhite2">
+                    <div className="in-box">
+                      <div className="hvalign w-full">
+                        content
                       </div>
                     </div>
                   </Box>
                 </div>
               </div>
             </div>
-            
-            <div className="desc border-bottom">
-              <Box bg="bg-white">
-                <div className="p-10">
-                  <p className="text-justify leading-loose text-sm md:text-xl">
-                    {index.description}
-                  </p>
-                </div>
-              </Box>
+
+            <div className="angry-grid2 border-bottom">
+              <div id="item-3">
+                <Box type="full"  bg="bg-white">
+                  <div className="in-box">
+                    <div className="valign">
+                      <h2 className="px-32 mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
+                        About me
+                      </h2>
+                      <div className="px-32 pt-0 md:flex">
+                        <p className="text-justify leading-loose text-sm md:text-xl">
+                          {index.description}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </Box>
+              </div>
             </div>
-
-            {moreProjects.length > 0 && <MoreProjects 
-            header="My Projects." 
-            desc="These are some personal projects I have been working on to learn 
-                  more about different technologies. I like exploring data-centric 
-                  projects and applying them to web applications and carrying out 
-                  research on artificial intelligence and machine learning."
-            projects={moreProjects} 
-            />}
-
-            <Link to="/portfolio">
-              <Box>
-                <div className="button2 text-center w-full border-bottom border-top">
-                  <h3 className="text-2xl"> See more projects</h3>
-                </div>
-              </Box>
-            </Link>
 
             <div>
               <div class="angry-grid3">
                 <div id="item-4" className="border-bottom">
                   <Box type="two-thirds" bg="bg-white">
                     <div className="in-box">
-                      <div className="valign px-10">
+                      <div className="valign px-32">
                         <p className="text-justify leading-loose text-sm md:text-xl ">
+                          I am a developer who likes data science and machine learning. 
+                          I made this website as a way to share all of my research, projects and articles. 
                           I have a a keen interest in data science and artificial intelligence. 
                           I am a self-motivated student seeking for a career that would allow me 
                           to apply my analytical abilities and advance professionally. I am 
@@ -142,7 +145,7 @@ export default function Index({data: { allPosts, allProjects, site, index, resum
                 <div id="item-7" className="border-bottom">
                   <Box type="two-thirds"  bg="bg-white">
                     <div className="in-box">
-                      <div className="valign px-10">
+                      <div className="valign px-32">
                         <p className="text-justify leading-loose text-sm md:text-xl ">
                         I'm enthusiastic about data science, especially considering 
                         how quickly technology is changing the profession. I enjoy 
@@ -158,6 +161,33 @@ export default function Index({data: { allPosts, allProjects, site, index, resum
                 </div>
               </div>
             </div>
+
+            <div className="desc border-bottom">
+              <Box bg="bg-white">
+                <div className="md:p-32 p-10">
+                  <p className="text-justify leading-loose text-sm md:text-xl">
+                    {index.description}
+                  </p>
+                </div>
+              </Box>
+            </div>
+
+            {moreProjects.length > 0 && <MoreProjects 
+            header="My Projects." 
+            desc="These are some personal projects I have been working on to learn 
+                  more about different technologies. I like exploring data-centric 
+                  projects and applying them to web applications and carrying out 
+                  research on artificial intelligence and machine learning."
+            projects={moreProjects} 
+            />}
+
+            <Link to="/portfolio">
+              <Box>
+                <div className="button2 text-center w-full border-bottom border-top">
+                  <h3 className="text-2xl"> See more projects</h3>
+                </div>
+              </Box>
+            </Link>
             
             {morePosts.length > 0 && <MoreStories 
               header="My Articles." 

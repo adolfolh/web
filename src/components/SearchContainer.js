@@ -31,7 +31,7 @@ class Search extends Component {
                 <Box>
                     <div className="z-40 w-full force-full absolute">{this.state.searchResults.map(result => (
                         <Link to={`/posts/${result.slug}`}>
-                            <div className="border-bottom md:px-10 px-4 py-4 bg-offwhite3 hover:bg-azure hover:text-white transition ease-in-out delay-150">
+                            <div className="border-bottom md:px-16 px-4 py-4 bg-offwhite3 hover:bg-azure hover:text-white transition ease-in-out delay-150">
                                 <p>{result.title}</p>
                             </div>
                         </Link>
@@ -44,7 +44,7 @@ class Search extends Component {
                 <Box>
                     <div className="z-40 w-full force-full absolute">{this.state.searchResults.map(result => (
                         <a href={result.hyperlink}>
-                            <div className="border-bottom md:px-10 px-4 py-4 bg-offwhite3 hover:bg-azure hover:text-white transition ease-in-out delay-150">
+                            <div className="border-bottom md:px-16 px-4 py-4 bg-offwhite3 hover:bg-azure hover:text-white transition ease-in-out delay-150">
                                 <p>{result.title}</p>
                             </div>
                         </a>
@@ -64,7 +64,7 @@ class Search extends Component {
                     value={this.state.value}
                     onChange={e => this.onChangeHandler(e)}
                     placeholder="Type something to search..."
-                    className="md:px-10 w-full py-4 px-4 border-bottom"
+                    className="md:px-16 w-full py-4 px-4 border-bottom"
                 />
             </Box>
             {this.renderSearchResults}

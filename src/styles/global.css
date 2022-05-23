@@ -52,14 +52,11 @@ body, input, select, textarea, p {
   @apply border-0 
 }
 .border-top {
-  border-top-width: 1px;
-  @apply border-black 
+  @apply border-0 
 }
 .border-bottom {
-  border-bottom-width: 1px;
-  @apply border-black 
+  @apply border-0 
 }
-
 @media (min-width: 900px) {
   .border-left {
     border-left-width: 1px;
@@ -69,7 +66,14 @@ body, input, select, textarea, p {
     border-right-width: 1px;
     @apply border-black 
   }
-
+  .border-top {
+    border-top-width: 1px;
+    @apply border-black 
+  }
+  .border-bottom {
+    border-bottom-width: 1px;
+    @apply border-black 
+  }
 }
 
 .cover-img {
@@ -260,7 +264,7 @@ button[disabled] .navbutton{
     grid-template-columns: 1fr 1fr 1fr;
     
     grid-template-areas: 
-   'label0 label1 label1';
+   'label0 label1 label2';
     
     gap: 0px;
     height: 100%;
@@ -276,7 +280,10 @@ button[disabled] .navbutton{
   grid-area: label1;
   
 }
-
+#item-2 {
+  grid-area: label2;
+  
+}
 /* GRID 2 */
 .angry-grid2{
   display: none;

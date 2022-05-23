@@ -12,10 +12,10 @@ export default function MoreStories({ posts, header, desc }) {
             <Box type="full" bg="bg-white">
               <div className="in-box">
                 <div className="valign">
-                   <h2 className="p-10 mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight ">
+                   <h2 className="md:px-32 p-10 mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight ">
                     {header}
                   </h2>
-                  {desc && <div className="px-10 pt-0 mb-16 md:flex">
+                  {desc && <div className="md:px-32 p-10 pt-0 md:flex">
                     <p className="text-justify leading-loose text-sm md:text-xl">
                       {desc}
                     </p>
@@ -28,10 +28,10 @@ export default function MoreStories({ posts, header, desc }) {
       </div>
 
       {header &&<div className="res-hide">
-          <h2 className="p-10 mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
+          <h2 className="md:px-32 p-10 mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
             {header}
           </h2>
-          {desc && <div className="px-10 pt-0 pb-16 md:flex">
+          {desc && <div className="md:px-32 p-10 pt-0 md:flex">
             <p className="text-justify leading-loose text-sm md:text-xl">
               {desc}
             </p>

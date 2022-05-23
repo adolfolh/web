@@ -17,7 +17,7 @@ export default function ProjectPreview({
       </div>
       <a className="w-full h-full flex flex-col" href={hyperlink}>
         <Box type="h-full" bg="bg-offwhite2">
-          <div className={'text-black p-10 xl:p-20 cardbg h-full items-center flex'}>
+          <div className={'text-black p-10 md:p-16 cardbg h-full items-center flex'}>
             <div>
               <h3 className="text-5xl pb-3 leading-snug hover:underline">
                 {title}

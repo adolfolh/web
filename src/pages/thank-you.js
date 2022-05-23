@@ -10,7 +10,7 @@ const ThankYouPage = () => (
     <div className="thanks-img"></div>
     <div className="paperOverlay"></div>
     <div 
-        className="px-10 flex-col flex items-center mt-16 mb-8"
+        className="px-32 flex-col flex items-center mt-16 mb-8"
     > 
         <h1 className="text-6xl">Sent.</h1> 
     </div>

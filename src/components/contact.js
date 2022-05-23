@@ -19,7 +19,7 @@ const Contact = () => {
                 <div id="item-3">
                     <Box type="full" bg="bg-white">
                         <div className="in-box">
-                            <div className="valign px-10">
+                            <div className="valign md:px-32 md:py-16 p-10">
                                 <h2 className="mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">Get in touch.</h2>
                                 <div className="md:flex">
                                     <p className="text-justify leading-loose text-sm md:text-xl">
@@ -35,7 +35,7 @@ const Contact = () => {
             </div>
             <div className="grid col-span-1 md:flex">
                 <Box bg="bg-offwhite2">
-                    <section className="p-10 w-full md:overflow-auto border-right">
+                    <section className="md:px-32 md:py-16 p-10 w-full md:overflow-auto border-right">
                         <form 
                             name="Contact Form"
                             method="POST"
@@ -81,7 +81,7 @@ const Contact = () => {
 
                 {/** SOCIALS AND MORE DETAILS */}
                 <Box bg="bg-offwhite2">
-                    <section className="p-10 w-full">
+                    <section className="md:px-32 md:py-16 p-10 w-full">
                         <ul className="contact">
                             <li className="mb-10">
                                 <h3>Location</h3>

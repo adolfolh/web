@@ -9,7 +9,7 @@ export default function PostHeader({ title, coverImage, date, category }) {
   return (
     <>
       <PostTitle>{title}</PostTitle>
-      <div className="hidden md:px-10 md:block md:mb-12">
+      <div className="hidden px-10 md:px-16 md:block md:mb-12">
                   {/** 
           <Link to="https://www.adolfolh.com">
             <Avatar name={author?.name} picture={author?.picture} />
