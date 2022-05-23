@@ -9,16 +9,6 @@ import Contact from "../components/contact";
 import Navbar from "../components/navbar";
 import Box from "../components/box"
 
-import grid1 from "../assets/grid-01.png"
-import grid2 from "../assets/grid-02.png"
-import grid3 from "../assets/grid-03.png"
-
-import dsd from "../assets/dsd.png"
-
-import smile from "../assets/smile.png"
-import star from "../assets/star.png"
-
-
 import { Link } from "gatsby";
 import { HelmetDatoCms } from "gatsby-source-datocms";
 import { graphql } from "gatsby";
@@ -27,7 +17,7 @@ import { GatsbyImage } from "gatsby-plugin-image";
 export default function Index({data: { allPosts, allProjects, site, index, resume }}) {
   const morePosts = allPosts.nodes.slice(0);
   const moreProjects = allProjects.nodes.slice(0);
-
+  console.log(index)
   return (
     <div className="relative">
       <div className="paperOverlay"></div>
@@ -41,7 +31,7 @@ export default function Index({data: { allPosts, allProjects, site, index, resum
           <div>
             <Box bg="bg-white">
               <div>
-                <section className="px-10 pt-12 pb-16 md:py-32">
+                <section className="px-10 pt-12 pb-16 md:py-32 border-bottom">
                   <h1 className="text-6xl md:text-9xl font-bold tracking-tighter leading-tight">
                     Adolfo López Herrera
                   </h1>
@@ -55,39 +45,35 @@ export default function Index({data: { allPosts, allProjects, site, index, resum
             </Box>
 
             <div>
-              <div className="angry-grid">
-                <div id="item-0">
+              <div className="angry-grid border-bottom">
+                <div id="item-0" className="">
                   <Box type="square" bg="bg-white">
                     <div className="in-box">
                       <div className="hvalign w-full overflow-hidden">
-                        <img 
-                          src={dsd}
+                        <GatsbyImage 
+                          image={index.squares[0].img}
                         />
                       </div>
                     </div>
                   </Box>
                 </div>
-                <div id="item-1">
+                <div id="item-1" className="border-left border-right">
                   <Box type="square"  bg="bg-white">
                     <div className="in-box">
                       <div className="valign px-10">
                         <p className="text-justify leading-loose text-sm md:text-xl">
-                          I am Adolfo López Herrera and I'm currently working on my undergraduate dissertation on machine learning, 
-                          but I am also looking for my next job/project as a data scientist. 
-                          I was born in Spain and I study in the UK, working on my bachelor’s degree 
-                          in computer science. My biggest interests lay in the subject of data 
-                          science and AI.
+                          {index.description}
                         </p>
                       </div>
                     </div>
                   </Box>
                 </div>
                 <div id="item-2">
-                  <Box type="square overflow-hidden rounded-xl"  bg="bg-offwhite2">
+                  <Box type="square overflow-hidden"  bg="bg-offwhite2">
                     <div className="in-box">
                       <div className="hvalign w-full">
-                        <img 
-                          src={grid1}
+                        <GatsbyImage 
+                          image={index.squares[1].img}
                         />
                       </div>
                     </div>
@@ -95,8 +81,8 @@ export default function Index({data: { allPosts, allProjects, site, index, resum
                 </div>
               </div>
             </div>
-
-            <div className="desc">
+            
+            <div className="desc border-bottom">
               <Box bg="bg-white">
                 <div className="p-10">
                   <p className="text-justify leading-loose text-sm md:text-xl">
@@ -118,7 +104,7 @@ export default function Index({data: { allPosts, allProjects, site, index, resum
 
             <Link to="/portfolio">
               <Box>
-                <div className="button2 text-center w-full">
+                <div className="button2 text-center w-full border-bottom border-top">
                   <h3 className="text-2xl"> See more projects</h3>
                 </div>
               </Box>
@@ -126,7 +112,7 @@ export default function Index({data: { allPosts, allProjects, site, index, resum
 
             <div>
               <div class="angry-grid3">
-                <div id="item-4">
+                <div id="item-4" className="border-bottom">
                   <Box type="two-thirds" bg="bg-white">
                     <div className="in-box">
                       <div className="valign px-10">
@@ -137,29 +123,29 @@ export default function Index({data: { allPosts, allProjects, site, index, resum
                     </div>
                   </Box>
                 </div>
-                <div id="item-5">
-                  <Box type="square overflow-hidden rounded-xl"  bg="bg-offwhite2">
+                <div id="item-5" className="border-bottom">
+                  <Box type="square overflow-hidden"  bg="bg-offwhite2">
                     <div className="in-box">
                       <div className="hvalign w-full">
-                        <img
-                          src={grid2}
+                        <GatsbyImage 
+                          image={index.squares[2].img}
                         />
                       </div>
                     </div>
                   </Box>
                 </div>
-                <div id="item-6">
-                  <Box type="square overflow-hidden rounded-xl"  bg="bg-offwhite2">
+                <div id="item-6" className="border-bottom">
+                  <Box type="square overflow-hidden"  bg="bg-offwhite2">
                     <div className="in-box">
                       <div className="hvalign w-full">
-                        <img 
-                          src={grid3}
+                        <GatsbyImage 
+                          image={index.squares[3].img}
                         />
                       </div>
                     </div>
                   </Box>
                 </div>
-                <div id="item-7">
+                <div id="item-7" className="border-bottom">
                   <Box type="two-thirds"  bg="bg-white">
                     <div className="in-box">
                       <div className="valign px-10">
@@ -181,7 +167,7 @@ export default function Index({data: { allPosts, allProjects, site, index, resum
 
             <Link to="/blog">
               <Box>
-                <div className="button2 text-center w-full">
+                <div className="button2 text-center w-full border-bottom border-top">
                   <h3 className="text-2xl"> See more articles</h3>
                 </div>
               </Box>
@@ -207,6 +193,10 @@ export const query = graphql`
     index: datoCmsIndex {
       seo: seoMetaTags {
         ...GatsbyDatoCmsSeoMetaTags
+      }
+      description,
+      squares {
+        img: gatsbyImageData(width: 1500, height: 1500)
       }
     }
     allPosts: allDatoCmsPost(sort: { fields: date, order: DESC }, limit: 3) {

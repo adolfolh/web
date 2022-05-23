@@ -29,9 +29,9 @@ class Search extends Component {
             if(this.props.searchType === 'Blog'){
                 searchResults = 
                 <Box>
-                    <div className="z-40 w-full ">{this.state.searchResults.map(result => (
+                    <div className="z-40 w-full force-full absolute">{this.state.searchResults.map(result => (
                         <Link to={`/posts/${result.slug}`}>
-                            <div className="md:px-10 px-4 py-4 bg-offwhite3 hover:bg-azure hover:text-white transition ease-in-out delay-150">
+                            <div className="border-bottom md:px-10 px-4 py-4 bg-offwhite3 hover:bg-azure hover:text-white transition ease-in-out delay-150">
                                 <p>{result.title}</p>
                             </div>
                         </Link>
@@ -42,9 +42,9 @@ class Search extends Component {
             if(this.props.searchType === 'Portfolio'){
                 searchResults = 
                 <Box>
-                    <div clasName="z-40 w-full">{this.state.searchResults.map(result => (
+                    <div clasName="z-40 w-full force-full absolute">{this.state.searchResults.map(result => (
                         <a href={result.hyperlink}>
-                            <div className="md:px-10 px-4 py-4 bg-offwhite3 hover:bg-azure hover:text-white transition ease-in-out delay-150">
+                            <div className="border-bottom md:px-10 px-4 py-4 bg-offwhite3 hover:bg-azure hover:text-white transition ease-in-out delay-150">
                                 <p>{result.title}</p>
                             </div>
                         </a>
@@ -58,13 +58,13 @@ class Search extends Component {
 
     render() {
     return (
-        <div className="w-full z-40">
+        <div className="w-full z-40 border-top">
             <Box>
                 <input
                     value={this.state.value}
                     onChange={e => this.onChangeHandler(e)}
                     placeholder="Type something to search..."
-                    className="md:px-10 w-full py-4 px-4"
+                    className="md:px-10 w-full py-4 px-4 border-bottom"
                 />
             </Box>
             {this.renderSearchResults}

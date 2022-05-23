@@ -11,7 +11,7 @@ export default function ProjectPreview({
   category,
 }) {
   return (
-    <div className={'grid grid-cols-1 w-full md:flex preview'}>
+    <div className={'grid grid-cols-1 w-full md:flex preview border-top'}>
       <div>
         <CoverImage title={title} hyperlink={hyperlink} fluid={coverImage.small} />
       </div>

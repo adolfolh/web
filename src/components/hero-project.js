@@ -16,7 +16,7 @@ export default function HeroProject({
       </div>
       <Box bg="">
         <a href={hyperlink}>
-          <div className="pt-8 px-10 pb-10 bg-offwhite2 transition ease-in-out delay-150 hover:bg-black hover:text-white cardbg">
+          <div className="py-20 px-10 bg-offwhite2 transition ease-in-out delay-150 hover:bg-black hover:text-white cardbg">
             <h3 className="mb-4 text-5xl lg:text-7xl leading-tight hover:underline">
               {title}
             </h3>

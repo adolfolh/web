@@ -13,7 +13,7 @@ export default function CoverImage2({ title, fluid, hyperlink }) {
   );
   return (
     <Box>
-      <div className="-mx-5 sm:mx-0">
+      <div className="-mx-5 sm:mx-0 rounded-2xl">
         {hyperlink ? (
           <a href={hyperlink} aria-label={title}>
             {image}

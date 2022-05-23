@@ -19,12 +19,12 @@ export default function HeroPost({
         </div>
         <Box bg="bg-white">
           <Link to={`/posts/${slug}`}>
-            <div className="pt-8 px-10 pb-10 bg-offwhite2 transition ease-in-out delay-150 hover:bg-black hover:text-white cardbg">
+            <div className="py-20 px-10 bg-offwhite2 transition ease-in-out delay-150 hover:bg-black hover:text-white cardbg">
               <h3 className="mb-4 text-5xl lg:text-7xl leading-tight hover:underline">
                 {title}
               </h3>
               <div className="uppercase text-sm mb-4 opacity-50 font-accent">
-                <Date dateString={date} /> • 5,000 views
+                <Date dateString={date} /> {/*• 5,000 views*/}
               </div>
 
               <p className="text-lg leading-relaxed mb-4">{excerpt}</p>

@@ -15,7 +15,7 @@ const Contact = () => {
 
     return (
         <div>
-            <div class="angry-grid2">
+            <div className="angry-grid2 border-bottom">
                 <div id="item-3">
                     <Box type="full" bg="bg-white">
                         <div className="in-box">
@@ -35,7 +35,7 @@ const Contact = () => {
             </div>
             <div className="grid col-span-1 md:flex">
                 <Box bg="bg-offwhite2">
-                    <section className="p-10 w-full md:overflow-auto">
+                    <section className="p-10 w-full md:overflow-auto border-right">
                         <form 
                             name="Contact Form"
                             method="POST"
@@ -80,7 +80,7 @@ const Contact = () => {
                 </Box>
 
                 {/** SOCIALS AND MORE DETAILS */}
-                <Box bg="bg-offwhite3">
+                <Box bg="bg-offwhite2">
                     <section className="p-10 w-full">
                         <ul className="contact">
                             <li className="mb-10">

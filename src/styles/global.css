@@ -45,6 +45,38 @@ body, input, select, textarea, p {
   @apply font-body
 }
 
+.border-left {
+  @apply border-0
+}
+.border-right {
+  @apply border-0 
+}
+.border-top {
+  @apply border-0 
+}
+.border-bottom {
+  @apply border-0 
+}
+
+@media (min-width: 900px) {
+  .border-left {
+    border-left-width: 1px;
+    @apply border-black
+  }
+  .border-right {
+    border-right-width: 1px;
+    @apply border-black 
+  }
+  .border-top {
+    border-top-width: 1px;
+    @apply border-black 
+  }
+  .border-bottom {
+    border-bottom-width: 1px;
+    @apply border-black 
+  }
+}
+
 .cover-img {
   filter: grayscale(1);
   @apply transition ease-in-out delay-150
@@ -74,18 +106,19 @@ body, input, select, textarea, p {
   @apply transition ease-in-out delay-150 border-white text-white
 }
 
-/*
+
 .checkered div:nth-child(even) .cardbg {
-  @apply bg-offwhite2
+  @apply border-left border-right
 }
 
+/*
 .checkered div:nth-child(odd) .cardbg {
   @apply bg-offwhite2
 }
 */
 
 .navbutton{
-  @apply bg-black text-white hover:text-azure md:py-4 duration-200 transition-all lg:mb-0 text-sm
+  @apply bg-white text-black hover:text-azure md:py-4 duration-200 transition-all lg:mb-0 text-sm
 }
 
 .button {
@@ -167,26 +200,6 @@ button[disabled] .navbutton{
 
 .in-container {
   /*@apply rounded-xl*/
-}
-
-.black-border {
-  @apply border-0
-}
-
-.layout {
-  @apply border-0
-}
-
-@media (min-width: 900px) {
-  .black-border {
-    border-width: 0.1px;
-    @apply border-black
-  }
-
-  .layout {
-    border-width: 0.1px;
-    @apply border-black w-full
-  }
 }
 
 .square{
@@ -377,6 +390,7 @@ button[disabled] .navbutton{
 
 .sidebar {
   z-index: 500;
+  @apply border-right
 }
 
 .popup {
@@ -399,4 +413,8 @@ button[disabled] .navbutton{
 
 .popup h2 {
   @apply text-xl text-white
+}
+
+.force-full {
+  max-width: calc(100vw - 4rem);
 }

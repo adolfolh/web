@@ -4,7 +4,7 @@ import Date from "../components/date";
 import CoverImage from "../components/cover-image";
 import PostTitle from "../components/post-title";
 
-export default function PostHeader({ title, coverImage, date, author }) {
+export default function PostHeader({ title, coverImage, date, category }) {
   return (
     <>
       <PostTitle>{title}</PostTitle>
@@ -16,10 +16,10 @@ export default function PostHeader({ title, coverImage, date, author }) {
           */}
 
           <div className="pill2">
-              5,000 views
+              {category}
           </div> 
       </div>
-      <div className="mb-8 md:mb-16 overflow-hidden">
+      <div className="mb-8 md:mb-16 overflow-hidden border-top">
         <CoverImage title={title} fluid={coverImage?.gatsbyImageData} />
       </div>
       <div className="md:px-0 px-5 max-w-2xl mx-auto">
@@ -31,7 +31,7 @@ export default function PostHeader({ title, coverImage, date, author }) {
           */}
 
           <div className="pill2">
-              5,000 views
+            {category}
           </div>         
         </div>
         <div className="opacity-50 uppercase md:px-0 mb-6 text-lg font-accent">

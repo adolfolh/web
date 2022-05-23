@@ -7,7 +7,7 @@ export default function MoreStories({ posts, header, desc }) {
     <section>
       <div>
       {header &&
-        <div class="angry-grid2">
+        <div className="angry-grid2">
           <div id="item-3">
             <Box type="full" bg="bg-white">
               <div className="in-box">
@@ -27,7 +27,7 @@ export default function MoreStories({ posts, header, desc }) {
         </div>}
       </div>
 
-      {header &&<div className="res-hide black-border">
+      {header &&<div className="res-hide">
           <h2 className="p-10 mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
             {header}
           </h2>
@@ -38,7 +38,7 @@ export default function MoreStories({ posts, header, desc }) {
           </div>}
       </div>}
 
-      <div className="overflow-hidden grid grid-cols-1 md:flex md:flex-wrap">
+      <div className="checkered overflow-hidden grid grid-cols-1 md:flex md:flex-wrap">
         {posts.map(post => (
           <PostPreview
             key={post.slug}

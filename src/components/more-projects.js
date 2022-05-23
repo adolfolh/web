@@ -26,7 +26,7 @@ export default function MoreProjects({ projects, header, desc }) {
         </div>}
       </div>
 
-      {header &&<div className="res-hide black-border">
+      {header &&<div className="res-hide">
           <h2 className="p-10 mb-8 text-6xl md:text-7xl font-bold tracking-tighter leading-tight">
             {header}
           </h2>
@@ -37,7 +37,7 @@ export default function MoreProjects({ projects, header, desc }) {
           </div>}
       </div>}
 
-      <div className="checkered overflow-hidden grid grid-cols-1">
+      <div className="overflow-hidden grid grid-cols-1">
         {projects.map(project => (
             <ProjectPreview
               key={project.hyperlink}

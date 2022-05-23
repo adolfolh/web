@@ -28,7 +28,7 @@ export default function Post({ data: { site, post, morePosts } }) {
                 title={post.title}
                 coverImage={post.coverImage}
                 date={post.date}
-                author={post.author}
+                category={post.category.name}
               />
               <PostBody content={post.content} />
             </article>
@@ -59,6 +59,9 @@ export const query = graphql`
       date
       coverImage {
         gatsbyImageData(width: 1500)
+      }
+      category {
+        name
       }
       content {
         value

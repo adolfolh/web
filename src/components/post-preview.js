@@ -13,17 +13,17 @@ export default function PostPreview({
   category,
 }) {
   return (
-    <div className={'flex-grow w-full md:w-1/3 preview'}>
+    <div className={'flex-grow w-full md:w-1/3 preview border-top border-bottom'}>
       <div>
         <CoverImage className="max-h-80 h-auto" slug={slug} title={title} fluid={coverImage.small} />
       </div>
       <Link style={{textDecoration: 'none'}} to={`/posts/${slug}`}>
-        <div className={'text-black p-10 h-full cardbg black-border bg-offwhite2'}>
+        <div className={'text-black p-10 h-full cardbg bg-offwhite2'}>
           <h2 className="text-3xl mb-3 leading-snug hover:underline">
             {title}
           </h2>
           <div className="uppercase text-sm mb-4 opacity-50 font-accent">
-            <Date dateString={date} /> • 5,000 views
+            <Date dateString={date} /> {/*• 5,000 views*/}
           </div>
           <p className="text-base leading-relaxed mb-4">{excerpt}</p>
 
