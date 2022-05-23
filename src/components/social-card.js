@@ -26,8 +26,7 @@ render() {
         <div onClick={this.togglePop}>
             <button>
                 <div className={'text-left navbutton'}>
-                <div className="icon text-center"><FontAwesomeIcon icon={faShareFromSquare} /></div>
-                <p className="overflow-hidden whitespace-nowrap">Share</p>
+                <div className="my-4 md:my-0 md:pb-2 icon text-center"><FontAwesomeIcon icon={faShareFromSquare} /></div>
                 </div>
             </button>
         </div>

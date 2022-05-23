@@ -3,6 +3,7 @@ import Avatar from "../components/avatar";
 import Date from "../components/date";
 import CoverImage from "../components/cover-image";
 import PostTitle from "../components/post-title";
+import SocialCard from "../components/social-card"
 
 export default function PostHeader({ title, coverImage, date, category }) {
   return (
@@ -15,9 +16,12 @@ export default function PostHeader({ title, coverImage, date, category }) {
           </Link>
           */}
 
-          <div className="pill2">
+          <div>
+            <div className="pill2 float-left">
               {category}
-          </div> 
+            </div>    
+            <SocialCard></SocialCard>
+          </div>    
       </div>
       <div className="mb-8 md:mb-16 overflow-hidden border-top">
         <CoverImage title={title} fluid={coverImage?.gatsbyImageData} />
@@ -30,9 +34,12 @@ export default function PostHeader({ title, coverImage, date, category }) {
           </Link>
           */}
 
-          <div className="pill2">
-            {category}
-          </div>         
+          <div>
+            <div className="pill2 float-left">
+              {category}
+            </div>    
+            <SocialCard></SocialCard>
+          </div>     
         </div>
         <div className="opacity-50 uppercase md:px-0 mb-6 text-lg font-accent">
           <Date dateString={date} />

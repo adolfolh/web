@@ -42,7 +42,7 @@ class Search extends Component {
             if(this.props.searchType === 'Portfolio'){
                 searchResults = 
                 <Box>
-                    <div clasName="z-40 w-full force-full absolute">{this.state.searchResults.map(result => (
+                    <div className="z-40 w-full force-full absolute">{this.state.searchResults.map(result => (
                         <a href={result.hyperlink}>
                             <div className="border-bottom md:px-10 px-4 py-4 bg-offwhite3 hover:bg-azure hover:text-white transition ease-in-out delay-150">
                                 <p>{result.title}</p>

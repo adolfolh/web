@@ -8,6 +8,7 @@ import MoreProjects from "../components/more-projects";
 import Contact from "../components/contact";
 import Navbar from "../components/navbar";
 import Box from "../components/box"
+import SocialCard from "../components/social-card"
 
 import { Link } from "gatsby";
 import { HelmetDatoCms } from "gatsby-source-datocms";
@@ -36,9 +37,10 @@ export default function Index({data: { allPosts, allProjects, site, index, resum
                     Adolfo López Herrera
                   </h1>
                   <div className="pt-8">
-                    <a href={resume.file.url} className="pill text-sm">
+                    <a href={resume.file.url} className="pill text-sm float-left">
                       Download resume
                     </a>
+                    <SocialCard></SocialCard>
                   </div>
                 </section>
               </div>
@@ -58,23 +60,12 @@ export default function Index({data: { allPosts, allProjects, site, index, resum
                   </Box>
                 </div>
                 <div id="item-1" className="border-left border-right">
-                  <Box type="square"  bg="bg-white">
+                  <Box type="two-thirds"  bg="bg-white">
                     <div className="in-box">
                       <div className="valign px-10">
                         <p className="text-justify leading-loose text-sm md:text-xl">
                           {index.description}
                         </p>
-                      </div>
-                    </div>
-                  </Box>
-                </div>
-                <div id="item-2">
-                  <Box type="square overflow-hidden"  bg="bg-offwhite2">
-                    <div className="in-box">
-                      <div className="hvalign w-full">
-                        <GatsbyImage 
-                          image={index.squares[1].img}
-                        />
                       </div>
                     </div>
                   </Box>
@@ -86,11 +77,7 @@ export default function Index({data: { allPosts, allProjects, site, index, resum
               <Box bg="bg-white">
                 <div className="p-10">
                   <p className="text-justify leading-loose text-sm md:text-xl">
-                    I am Adolfo López Herrera and I'm currently working on my undergraduate dissertation on machine learning, 
-                    but I am also looking for my next job/project as a data scientist. 
-                    I was born in Spain and I study in the UK, working on my bachelor’s degree 
-                    in computer science. My biggest interests lay in the subject of data 
-                    science and AI.
+                    {index.description}
                   </p>
                 </div>
               </Box>
@@ -98,7 +85,10 @@ export default function Index({data: { allPosts, allProjects, site, index, resum
 
             {moreProjects.length > 0 && <MoreProjects 
             header="My Projects." 
-            desc="Lorem Ipsum is simply dummy text of the printing and since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+            desc="These are some personal projects I have been working on to learn 
+                  more about different technologies. I like exploring data-centric 
+                  projects and applying them to web applications and carrying out 
+                  research on artificial intelligence and machine learning."
             projects={moreProjects} 
             />}
 
@@ -117,7 +107,11 @@ export default function Index({data: { allPosts, allProjects, site, index, resum
                     <div className="in-box">
                       <div className="valign px-10">
                         <p className="text-justify leading-loose text-sm md:text-xl ">
-                          It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.
+                          I have a a keen interest in data science and artificial intelligence. 
+                          I am a self-motivated student seeking for a career that would allow me 
+                          to apply my analytical abilities and advance professionally. I am 
+                          adaptable, dependable, and a team worker who can adjust to any
+                          demanding scenario.
                         </p>
                       </div>
                     </div>
@@ -128,7 +122,7 @@ export default function Index({data: { allPosts, allProjects, site, index, resum
                     <div className="in-box">
                       <div className="hvalign w-full">
                         <GatsbyImage 
-                          image={index.squares[2].img}
+                          image={index.squares[1].img}
                         />
                       </div>
                     </div>
@@ -139,7 +133,7 @@ export default function Index({data: { allPosts, allProjects, site, index, resum
                     <div className="in-box">
                       <div className="hvalign w-full">
                         <GatsbyImage 
-                          image={index.squares[3].img}
+                          image={index.squares[2].img}
                         />
                       </div>
                     </div>
@@ -150,7 +144,13 @@ export default function Index({data: { allPosts, allProjects, site, index, resum
                     <div className="in-box">
                       <div className="valign px-10">
                         <p className="text-justify leading-loose text-sm md:text-xl ">
-                          It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.
+                        I'm enthusiastic about data science, especially considering 
+                        how quickly technology is changing the profession. I enjoy 
+                        being a part of new technologies and trying out innovative 
+                        solutions. I'm especially interested in artificial intelligence 
+                        after learning about machine learning in my studies, and I'm 
+                        eager to use AI in a more practical capacity. I especially 
+                        admire the uses of predictive analytics.
                         </p>
                       </div>
                     </div>
@@ -161,7 +161,10 @@ export default function Index({data: { allPosts, allProjects, site, index, resum
             
             {morePosts.length > 0 && <MoreStories 
               header="My Articles." 
-              desc="Dummy text of the printing and typeset dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic."
+              desc="Recently, I began writing articles about my research on 
+                    data science and other fields. I am new to this but my aim
+                    is to write stories that are comprehensive and share my 
+                    passion for these topics."
               posts={morePosts} 
             />}
 
@@ -206,8 +209,8 @@ export const query = graphql`
         excerpt
         date
         coverImage {
-          large: gatsbyImageData(width: 1500)
-          small: gatsbyImageData(width: 900, height: 900)
+          large: gatsbyImageData(width: 1500, height: 900)
+          small: gatsbyImageData(width: 900, height: 540)
         }
         category {
           name
@@ -232,8 +235,8 @@ export const query = graphql`
         excerpt
         hyperlink
         coverImage {
-          large: gatsbyImageData(width: 1500)
-          small: gatsbyImageData(width: 900, height: 900)
+          large: gatsbyImageData(width: 1500, height: 900)
+          small: gatsbyImageData(width: 1000, height: 600)
         }
         category {
           name

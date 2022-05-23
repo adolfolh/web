@@ -52,10 +52,12 @@ body, input, select, textarea, p {
   @apply border-0 
 }
 .border-top {
-  @apply border-0 
+  border-top-width: 1px;
+  @apply border-black 
 }
 .border-bottom {
-  @apply border-0 
+  border-bottom-width: 1px;
+  @apply border-black 
 }
 
 @media (min-width: 900px) {
@@ -67,14 +69,7 @@ body, input, select, textarea, p {
     border-right-width: 1px;
     @apply border-black 
   }
-  .border-top {
-    border-top-width: 1px;
-    @apply border-black 
-  }
-  .border-bottom {
-    border-bottom-width: 1px;
-    @apply border-black 
-  }
+
 }
 
 .cover-img {
@@ -265,7 +260,7 @@ button[disabled] .navbutton{
     grid-template-columns: 1fr 1fr 1fr;
     
     grid-template-areas: 
-   'label0 label1 label2';
+   'label0 label1 label1';
     
     gap: 0px;
     height: 100%;
@@ -279,10 +274,6 @@ button[disabled] .navbutton{
 }
 #item-1 {
   grid-area: label1;
-  
-}
-#item-2 {
-  grid-area: label2;
   
 }
 
@@ -394,18 +385,58 @@ button[disabled] .navbutton{
 }
 
 .popup {
-  padding-left: 12rem;
-  padding-right: 12rem;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-
+  z-index: 600;
   position: fixed;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  width: 90vw;
+  height: 75vh;
 
-  @apply border-black border-2 bg-black
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @apply border-black border-2 bg-black px-8
 }
+
+@media (min-width: 900px) {
+  .popup {
+    z-index: 600;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100vw - 26rem);
+    height: calc(100vh - 16rem);
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+    @apply border-black border-2 bg-black px-16
+  }
+} 
+
+@media (min-width: 1100px) {
+  .popup {
+    z-index: 600;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100vw - 40rem);
+    height: calc(100vh - 16rem);
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+    @apply border-black border-2 bg-black px-32
+  }
+}  
+
+
 
 .popup h1 {
   @apply text-3xl text-white
@@ -416,5 +447,11 @@ button[disabled] .navbutton{
 }
 
 .force-full {
-  max-width: calc(100vw - 4rem);
+  max-width: 100%;
+}
+
+@media (min-width: 900px) {
+  .force-full {
+    max-width: calc(100vw - 4rem);
+  }
 }

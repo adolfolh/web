@@ -110,7 +110,8 @@ export const query = graphql`
         excerpt
         date
         coverImage {
-          small: gatsbyImageData(width: 760, height: 760)
+          large: gatsbyImageData(width: 1500, height: 900)
+          small: gatsbyImageData(width: 900, height: 540)
         }
         category {
           name

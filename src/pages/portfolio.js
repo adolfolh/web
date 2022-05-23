@@ -70,8 +70,8 @@ export const query = graphql`
           name
         }
         coverImage {
-          large: gatsbyImageData(width: 1500)
-          small: gatsbyImageData(width: 900, height: 900)
+          large: gatsbyImageData(width: 1500, height: 900)
+          small: gatsbyImageData(width: 1000, height: 600)
         }
       }
     }
