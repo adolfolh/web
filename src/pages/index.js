@@ -45,7 +45,7 @@ export default function Index({data: { allPosts, allProjects, site, index, resum
                 </section>
               </div>
             </Box>
-
+            
             <div>
               <div className="angry-grid border-bottom">
                 <div id="item-0" className="">
@@ -108,13 +108,7 @@ export default function Index({data: { allPosts, allProjects, site, index, resum
                     <div className="in-box">
                       <div className="valign px-32">
                         <p className="text-justify leading-loose text-sm md:text-xl ">
-                          I am a developer who likes data science and machine learning. 
-                          I made this website as a way to share all of my research, projects and articles. 
-                          I have a a keen interest in data science and artificial intelligence. 
-                          I am a self-motivated student seeking for a career that would allow me 
-                          to apply my analytical abilities and advance professionally. I am 
-                          adaptable, dependable, and a team worker who can adjust to any
-                          demanding scenario.
+                          {index.text1}
                         </p>
                       </div>
                     </div>
@@ -147,13 +141,7 @@ export default function Index({data: { allPosts, allProjects, site, index, resum
                     <div className="in-box">
                       <div className="valign px-32">
                         <p className="text-justify leading-loose text-sm md:text-xl ">
-                        I'm enthusiastic about data science, especially considering 
-                        how quickly technology is changing the profession. I enjoy 
-                        being a part of new technologies and trying out innovative 
-                        solutions. I'm especially interested in artificial intelligence 
-                        after learning about machine learning in my studies, and I'm 
-                        eager to use AI in a more practical capacity. I especially 
-                        admire the uses of predictive analytics.
+                          {index.text2}
                         </p>
                       </div>
                     </div>
@@ -228,6 +216,8 @@ export const query = graphql`
         ...GatsbyDatoCmsSeoMetaTags
       }
       description,
+      text1,
+      text2,
       squares {
         img: gatsbyImageData(width: 1500, height: 1500)
       }
