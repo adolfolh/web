@@ -9,6 +9,7 @@ import Navbar from "../components/navbar";
 import Box from "../components/box"
 import SocialCard from "../components/social-card"
 
+import character from "../assets/character.svg"
 import donut from "../assets/donut.svg"
 
 import { Link } from "gatsby";
@@ -73,9 +74,9 @@ export default function Index({data: { allPosts, allProjects, site, index, resum
                           Passionate about emerging technologies in machine learning.
                         </p>
                         <br/>
-                        <a href="https://www.linkedin.com/in/adolfolh" className="underline mt-8 text-gray-500">
-                          My blog
-                        </a>
+                        <Link to="/blog" className="underline mt-8 text-gray-500">
+                          See blog
+                        </Link>
                         <div className="bottom-16 absolute">
                           <div className="pill2 text-sm float-left mr-2">
                             News
@@ -99,9 +100,9 @@ export default function Index({data: { allPosts, allProjects, site, index, resum
                           Data scientist specialised on time series forecasting methods.
                         </p>
                         <br/>
-                        <a href="https://www.linkedin.com/in/adolfolh" className="underline mt-8 text-gray-500">
-                          My portfolio
-                        </a>
+                        <Link to="/portfolio" className="underline mt-8 text-gray-500">
+                          See portfolio
+                        </Link>
                         <div className="bottom-16 absolute">
                           <div className="pill2 text-sm float-left mr-2">
                             Data Analysis
@@ -209,7 +210,7 @@ export default function Index({data: { allPosts, allProjects, site, index, resum
 
             <div className="border-bottom">
               <Box bg="bg-white">
-                <div className="md:p-32 p-10">
+                <div className="md:p-32 md:pb-16 p-10">
                   <p className="text-justify leading-loose text-sm md:text-xl">
                     {index.description}
                   </p>
@@ -221,6 +222,12 @@ export default function Index({data: { allPosts, allProjects, site, index, resum
                   <p className="text-justify leading-loose text-sm md:text-xl">
                     {index.text2}
                   </p>
+                </div>
+                <div className="flex md:pb-32 pb-10 justify-center lg:hidden">
+                  <img
+                    width={200}
+                    src={donut}
+                  />
                 </div>
               </Box>
             </div>
@@ -251,13 +258,13 @@ export default function Index({data: { allPosts, allProjects, site, index, resum
               posts={morePosts} 
             />}
 
-            <Link to="/blog">
+            {morePosts.length > 0 &&<Link to="/blog">
               <Box>
                 <div className="button2 text-center w-full border-bottom border-top">
                   <h3 className="text-2xl"> See more articles</h3>
                 </div>
               </Box>
-            </Link>
+            </Link>}
             
             <Contact></Contact>
 
