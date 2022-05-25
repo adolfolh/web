@@ -168,8 +168,12 @@ button[disabled] .navbutton{
     font-size: 4vw;
   }
 
-  .in-box p {
-    font-size: 1.3vw;
+  .in-box .quote {
+    font-size: 1.75vw;
+  }
+
+  .in-box .two-thirds p {
+    font-size: 1.4vw;
   }
 }
 
@@ -233,6 +237,12 @@ button[disabled] .navbutton{
 
 .res-hide {
   display: block;
+}
+
+.donut {
+  left: calc(66.666% - 100px);
+  bottom: calc(50% - 71.5px);
+  @apply absolute
 }
 
 .desc {

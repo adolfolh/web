@@ -2,7 +2,6 @@ import React from "react";
 import Footer from "../components/footer";
 import Sidebar from "../components/sidebar";
 import Layout from "../components/layout"
-import Intro from "../components/intro";
 import MoreStories from "../components/more-stories";
 import MoreProjects from "../components/more-projects";
 import Contact from "../components/contact";
@@ -10,10 +9,16 @@ import Navbar from "../components/navbar";
 import Box from "../components/box"
 import SocialCard from "../components/social-card"
 
+import donut from "../assets/donut.svg"
+
 import { Link } from "gatsby";
 import { HelmetDatoCms } from "gatsby-source-datocms";
 import { graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
+
+import { faQuoteRight } from "@fortawesome/free-solid-svg-icons"
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Index({data: { allPosts, allProjects, site, index, resume }}) {
   const morePosts = allPosts.nodes.slice(0);
@@ -31,8 +36,8 @@ export default function Index({data: { allPosts, allProjects, site, index, resum
           
           <div>
             <Box bg="bg-white">
-              <div>
-                <section className="md:px-32 p-10 pt-12 pb-16 md:py-32 border-bottom">
+              <div className="block relative md:flex border-bottom">
+                <section className="md:px-32 p-10 pt-12 pb-16 md:py-32 float-left w-full md:w-2/3">
                   <h1 className="text-6xl md:text-9xl font-bold tracking-tighter leading-tight">
                     Adolfo López Herrera
                   </h1>
@@ -43,6 +48,18 @@ export default function Index({data: { allPosts, allProjects, site, index, resum
                     <SocialCard></SocialCard>
                   </div>
                 </section>
+                <div className="w-1/3 border-left hidden md:block">
+                  <GatsbyImage 
+                    className="h-full"
+                    image={index.squares[0].img}
+                  />
+                </div>
+                <div className="donut hidden lg:block">
+                  <img
+                    width={200}
+                    src={donut}
+                  />
+                </div>
               </div>
             </Box>
             
@@ -51,10 +68,25 @@ export default function Index({data: { allPosts, allProjects, site, index, resum
                 <div id="item-0" className="">
                   <Box type="square" bg="bg-white">
                     <div className="in-box">
-                      <div className="hvalign w-full overflow-hidden">
-                        <GatsbyImage 
-                          image={index.squares[0].img}
-                        />
+                      <div className="p-16">
+                        <p className="font-semibold quote">
+                          Passionate about emerging technologies in machine learning.
+                        </p>
+                        <br/>
+                        <a href="https://www.linkedin.com/in/adolfolh" className="underline mt-8 text-gray-500">
+                          My blog
+                        </a>
+                        <div className="bottom-16 absolute">
+                          <div className="pill2 text-sm float-left mr-2">
+                            News
+                          </div>
+                          <div className="pill2 text-sm float-left mr-2">
+                            Tech
+                          </div>
+                          <div className="pill2 text-sm float-left">
+                            AI
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </Box>
@@ -62,10 +94,22 @@ export default function Index({data: { allPosts, allProjects, site, index, resum
                 <div id="item-1" className="border-left border-right">
                   <Box type="square"  bg="bg-white">
                     <div className="in-box">
-                      <div className="valign px-32">
-                        <p className="text-justify leading-loose text-sm md:text-xl">
-                          content
+                      <div className="p-16">
+                        <p className="font-semibold quote">
+                          Data scientist specialised on time series forecasting methods.
                         </p>
+                        <br/>
+                        <a href="https://www.linkedin.com/in/adolfolh" className="underline mt-8 text-gray-500">
+                          My portfolio
+                        </a>
+                        <div className="bottom-16 absolute">
+                          <div className="pill2 text-sm float-left mr-2">
+                            Data Analysis
+                          </div>
+                          <div className="pill2 text-sm float-left">
+                            ML
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </Box>
@@ -73,15 +117,26 @@ export default function Index({data: { allPosts, allProjects, site, index, resum
                 <div id="item-2">
                   <Box type="square overflow-hidden"  bg="bg-offwhite2">
                     <div className="in-box">
-                      <div className="hvalign w-full">
-                        content
+                      <div className="p-16">
+                        <p className="quote mr-16">                        
+                          Errors using inadequate data are much less than those using no data at all.
+                        </p>
+                      </div>
+                      <div className="p-16">
+                        <p className="bottom-16 absolute text-gray-500">
+                          Charles Babbage
+                        </p>
+                      </div>
+                      <div className="absolute top-16 right-16">
+                        <FontAwesomeIcon icon={faQuoteRight} size="2x" />
                       </div>
                     </div>
                   </Box>
                 </div>
               </div>
             </div>
-
+            
+            {/*
             <div className="angry-grid2 border-bottom">
               <div id="item-3">
                 <Box type="full"  bg="bg-white">
@@ -101,6 +156,7 @@ export default function Index({data: { allPosts, allProjects, site, index, resum
               </div>
             </div>
 
+            
             <div>
               <div class="angry-grid3">
                 <div id="item-4" className="border-bottom">
@@ -149,12 +205,21 @@ export default function Index({data: { allPosts, allProjects, site, index, resum
                 </div>
               </div>
             </div>
+            */}
 
-            <div className="desc border-bottom">
+            <div className="border-bottom">
               <Box bg="bg-white">
                 <div className="md:p-32 p-10">
                   <p className="text-justify leading-loose text-sm md:text-xl">
                     {index.description}
+                  </p>
+                  <br/>
+                  <p className="text-justify leading-loose text-sm md:text-xl">
+                    {index.text1}
+                  </p>
+                  <br/>
+                  <p className="text-justify leading-loose text-sm md:text-xl">
+                    {index.text2}
                   </p>
                 </div>
               </Box>

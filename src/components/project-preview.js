@@ -12,12 +12,12 @@ export default function ProjectPreview({
 }) {
   return (
     <div className={'grid grid-cols-1 w-full md:flex preview border-top'}>
-      <div>
-        <CoverImage title={title} hyperlink={hyperlink} fluid={coverImage.small} />
+      <div className="overflow-hidden">
+        <CoverImage title={title} hyperlink={hyperlink} fluid={coverImage.small}/>
       </div>
       <a className="w-full h-full flex flex-col" href={hyperlink}>
         <Box type="h-full" bg="bg-offwhite2">
-          <div className={'text-black p-10 md:p-16 cardbg h-full items-center flex'}>
+          <div className={'text-black p-10 md:p-16 md:py-8 cardbg h-full items-center flex'}>
             <div>
               <h3 className="text-5xl pb-3 leading-snug hover:underline">
                 {title}

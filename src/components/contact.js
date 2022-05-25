@@ -99,7 +99,7 @@ const Contact = () => {
                                     <li><a className="pr-2 h-2 w-2" target="_blank" rel="noreferrer" href="https://www.twitter.com/adolfoolh"><span className="label"><FontAwesomeIcon icon={faTwitter} /></span></a></li>
                                     <li><a className="pr-2 h-2 w-2" target="_blank" rel="noreferrer" href="https://www.github.com/adolfolh"><span className="label"><FontAwesomeIcon icon={faGithub} /></span></a></li>
                                     <li><a className="pr-2 h-2 w-2" target="_blank" rel="noreferrer" href="https://www.instagram.com/adolfo.lh" ><span className="label"><FontAwesomeIcon icon={faInstagram} /></span></a></li>
-                                    <li><a className="pr-2 h-2 w-2" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/adolfo-l%C3%B3pez-herrera-0042a61b5"><span className="label"><FontAwesomeIcon icon={faLinkedin} /></span></a></li>
+                                    <li><a className="pr-2 h-2 w-2" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/adolfolh"><span className="label"><FontAwesomeIcon icon={faLinkedin} /></span></a></li>
                                 </ul>
                             </li>
                         </ul>
