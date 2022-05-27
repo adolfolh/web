@@ -302,7 +302,7 @@ export const query = graphql`
         date
         coverImage {
           large: gatsbyImageData(width: 1500, height: 900)
-          small: gatsbyImageData(width: 900, height: 540)
+          small: gatsbyImageData(width: 1500, height: 900)
         }
         category {
           name
@@ -328,7 +328,7 @@ export const query = graphql`
         hyperlink
         coverImage {
           large: gatsbyImageData(width: 1500, height: 900)
-          small: gatsbyImageData(width: 1000, height: 600)
+          small: gatsbyImageData(width: 1500, height: 900)
         }
         category {
           name
