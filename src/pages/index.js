@@ -9,7 +9,6 @@ import Navbar from "../components/navbar";
 import Box from "../components/box"
 import SocialCard from "../components/social-card"
 
-import character from "../assets/character.svg"
 import donut from "../assets/donut.svg"
 
 import { Link } from "gatsby";
@@ -53,12 +52,6 @@ export default function Index({data: { allPosts, allProjects, site, index, resum
                   <GatsbyImage 
                     className="h-full"
                     image={index.squares[0].img}
-                  />
-                </div>
-                <div className="donut hidden lg:block">
-                  <img
-                    width={200}
-                    src={donut}
                   />
                 </div>
               </div>
@@ -223,7 +216,7 @@ export default function Index({data: { allPosts, allProjects, site, index, resum
                     {index.text2}
                   </p>
                 </div>
-                <div className="flex md:pb-32 pb-10 justify-center lg:hidden">
+                <div className="flex md:pb-32 pb-10 justify-center">
                   <img
                     width={200}
                     src={donut}
